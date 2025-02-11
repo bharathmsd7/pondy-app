@@ -14,7 +14,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/home', request.url));
   } else {
     // If the user is not logged in, redirect to /auth
-    return NextResponse.redirect(new URL('/auth', request.url));
+    return NextResponse.redirect(new URL('/auth/login', request.url));
   }
 }
 
