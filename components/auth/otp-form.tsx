@@ -74,7 +74,7 @@ export function OtpForm({
         frame();
 
         setTimeout(() => {
-            router.push('/home');
+            router.push('/dashboard');
         }, 2000);
     }
 

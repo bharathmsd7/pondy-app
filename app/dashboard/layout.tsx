@@ -10,10 +10,10 @@ export default function HomeLayout({
 
   const navItems = [
     { name: 'Home', url: '#', icon: Home },
-    { name: 'Activites', url: '#', icon: Sailboat },
-    { name: 'Rentals', url: '#', icon: CarFront },
-    { name: 'Places', url: '#', icon: TreePalm },
-    { name: 'Packages', url: '#', icon: Package2 }
+    { name: 'Activites', url: 'activites', icon: Sailboat },
+    { name: 'Rentals', url: 'rentals', icon: CarFront },
+    { name: 'Places', url: 'places', icon: TreePalm },
+    { name: 'Packages', url: 'packages', icon: Package2 }
   ];
   return (
     <div className="flex flex-col min-h-screen">

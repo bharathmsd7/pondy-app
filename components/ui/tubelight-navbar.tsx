@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useRouter } from "next/navigation"
 
 interface NavItem {
   name: string
@@ -18,6 +19,7 @@ interface NavBarProps {
 }
 
 export function NavBar({ items, className }: NavBarProps) {
+  const router = useRouter()
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -44,10 +46,12 @@ export function NavBar({ items, className }: NavBarProps) {
           const isActive = activeTab === item.name
 
           return (
-            <Link
+            <div
               key={item.name}
-              href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              onClick={() => {
+                setActiveTab(item.name)
+                router.replace(window.location.pathname.startsWith("/dashboard/") ? item.url : `dashboard/${item.url}`)
+              }}
               className={cn(
                 "relative cursor-pointer font-semibold px-4 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",
@@ -77,7 +81,7 @@ export function NavBar({ items, className }: NavBarProps) {
                   </div>
                 </motion.div>
               )}
-            </Link>
+            </div>
           )
         })}
       </div>
