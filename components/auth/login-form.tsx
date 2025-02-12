@@ -39,7 +39,7 @@ export function LoginForm({
                 <Label htmlFor="mobile">Mobile Number</Label>
                 <Input
                   id="mobileNumber"
-                  type="text"
+                  type="number"
                   placeholder="9*********"
                   required
                   value={mobileNumber}
