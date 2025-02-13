@@ -65,7 +65,7 @@ export default function OnboardingPage() {
   }, [router]);
 
   const completeOnboarding = () => {
-    Cookies.set('isOnboardingCompleted', 'true', { expires: 365 });
+    Cookies.set('isOnboardingCompleted', 'false', { expires: 365 });
     router.push('/auth/login');
   };
 
