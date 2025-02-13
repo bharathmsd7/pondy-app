@@ -2,23 +2,35 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
+  const isOnboardingCompleted = request.cookies.get('isOnboardingCompleted')?.value === 'true';
   const loggedIn = request.cookies.get('loggedIn')?.value === 'true';
+  const { pathname } = request.nextUrl;
 
-  // Allow navigation to /auth if not logged in
-  if (!loggedIn && (request.nextUrl.pathname.startsWith('/auth'))) {
-    return NextResponse.next(); // Allow access to /auth
+  // Allow direct access to onboarding and auth routes
+  if (pathname.startsWith('/onboarding') || pathname.startsWith('/auth')) {
+    return NextResponse.next();
   }
 
-  if (loggedIn) {
-    // If the user is logged in, redirect to /home
+  // Check onboarding status for root path
+  if (pathname === '/') {
+    if (!isOnboardingCompleted) {
+      return NextResponse.redirect(new URL('/onboarding', request.url));
+    }
+    if (!loggedIn) {
+      return NextResponse.redirect(new URL('/auth/login', request.url));
+    }
     return NextResponse.redirect(new URL('/dashboard', request.url));
-  } else {
-    // If the user is not logged in, redirect to /auth
+  }
+
+  // Protected routes check
+  if (!loggedIn && !pathname.startsWith('/auth')) {
     return NextResponse.redirect(new URL('/auth/login', request.url));
   }
+
+  return NextResponse.next();
 }
 
 // Specify the paths where the middleware should run
 export const config = {
-  matcher: ['/'], // Apply middleware to the root path
-}; 
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+};
