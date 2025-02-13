@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const isOnboardingCompleted = request.cookies.get('isOnboardingCompleted')?.value === 'true';
-  const loggedIn = request.cookies.get('loggedIn')?.value === 'true';
+//   const loggedIn = request.cookies.get('loggedIn')?.value === 'true';
   const { pathname } = request.nextUrl;
 
   // Allow direct access to onboarding and auth routes
@@ -16,16 +16,16 @@ export function middleware(request: NextRequest) {
     if (!isOnboardingCompleted) {
       return NextResponse.redirect(new URL('/onboarding', request.url));
     }
-    if (!loggedIn) {
-      return NextResponse.redirect(new URL('/auth/login', request.url));
-    }
+    // if (!loggedIn) {
+    //   return NextResponse.redirect(new URL('/auth/login', request.url));
+    // }
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
 
   // Protected routes check
-  if (!loggedIn && !pathname.startsWith('/auth')) {
-    return NextResponse.redirect(new URL('/auth/login', request.url));
-  }
+//   if (!loggedIn && !pathname.startsWith('/auth')) {
+//     return NextResponse.redirect(new URL('/auth/login', request.url));
+//   }
 
   return NextResponse.next();
 }

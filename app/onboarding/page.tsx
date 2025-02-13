@@ -58,10 +58,10 @@ export default function OnboardingPage() {
   const [[page, direction], setPage] = useState([0, 0]);
 
   useEffect(() => {
-    const isOnboardingCompleted = Cookies.get('isOnboardingCompleted');
-    if (isOnboardingCompleted === 'true') {
-      router.push('/auth/login');
-    }
+    // const isOnboardingCompleted = Cookies.get('isOnboardingCompleted');
+    // if (isOnboardingCompleted === 'true' || isOnboardingCompleted === 'false') {
+    //   router.push('/auth/login');
+    // }
   }, [router]);
 
   const completeOnboarding = () => {
