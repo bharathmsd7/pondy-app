@@ -142,6 +142,9 @@ export default function OnboardingPage() {
           >
             <Card className="border-none bg-transparent shadow-none">
               <CardContent className="flex flex-col items-center p-6">
+                <div className="absolute top-6 right-3 w-24 h-24">
+                    <SpinningText>Explore . Pondicherry .</SpinningText>
+                </div>
                 <div className="relative w-full aspect-[4/3] mb-6 rounded-2xl overflow-hidden group">
                   <Image
                     src={onboardingData[page].image}
@@ -162,10 +165,7 @@ export default function OnboardingPage() {
         </AnimatePresence>
       </div>
 
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex justify-between items-center gap-8 z-10 w-full max-w-md px-8">
-        <div className="relative w-24 h-24 flex items-center justify-center">
-          <SpinningText>Explore Pondicherry</SpinningText>
-        </div>
+      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex justify-center items-center z-10 w-full max-w-md px-8">
         <div className="relative flex items-center justify-center">
 
           {/* Circular progress indicators */}
