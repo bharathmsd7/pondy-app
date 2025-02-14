@@ -9,7 +9,7 @@ export default function HomeLayout({
   }>) {
 
   const navItems = [
-    { name: 'Home', url: '#', icon: Home },
+    { name: 'Home', url: '/dashboard', icon: Home },
     { name: 'Activites', url: 'activites', icon: Sailboat },
     { name: 'Rentals', url: 'rentals', icon: CarFront },
     { name: 'Places', url: 'places', icon: TreePalm },

@@ -3,7 +3,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { PWAPrompt } from '@/components/pwa-prompt';
+// import { PWAPrompt } from '@/components/pwa-prompt';
 import type { Metadata, Viewport } from "next";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -74,7 +74,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-        <PWAPrompt />
+        {/* <PWAPrompt /> */}
       </body>
     </html>
   );
