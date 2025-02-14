@@ -1,30 +1,59 @@
-import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Viewport } from "next"
+import type { Metadata, Viewport } from "next";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: "Pondy App",
-  description: "Puducherry Tourism Application",
-  icons: {
-    icon: [{ url: "/icons/web-app-manifest-192x192.png", sizes: "196x196", type: "image/png" }],
-    apple: [{ url: "/icons/web-app-manifest-192x192.png" }],
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "black-translucent",
-  },
-};
+const APP_NAME = "Visit Pondy";
+const APP_DEFAULT_TITLE = "Visit Pondy";
+const APP_TITLE_TEMPLATE = "%s - Visit Pondy";
+const APP_DESCRIPTION = "Puducherry Tourism Application";
 
-export const viewport: Viewport = {
+export const metadata: Metadata = {
+    applicationName: APP_NAME,
+    title: {
+      default: APP_DEFAULT_TITLE,
+      template: APP_TITLE_TEMPLATE,
+    },
+    description: APP_DESCRIPTION,
+    manifest: "/manifest.json",
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "black-translucent",
+      title: APP_DEFAULT_TITLE,
+      // startUpImage: [],
+    },
+    formatDetection: {
+      telephone: false,
+    },
+    openGraph: {
+      type: "website",
+      siteName: APP_NAME,
+      title: {
+        default: APP_DEFAULT_TITLE,
+        template: APP_TITLE_TEMPLATE,
+      },
+      description: APP_DESCRIPTION,
+    },
+    twitter: {
+      card: "summary",
+      title: {
+        default: APP_DEFAULT_TITLE,
+        template: APP_TITLE_TEMPLATE,
+      },
+      description: APP_DESCRIPTION,
+    }
+  };
+  
+  export const viewport: Viewport = {
+    themeColor: "#FFFFFF",    
     maximumScale: 1,
     userScalable: false
-}
+  };
+
 
 export default function RootLayout({
   children,
