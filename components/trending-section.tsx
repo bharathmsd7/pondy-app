@@ -55,9 +55,11 @@ export function TrendingSection() {
               key={person.id} 
               className={`flex flex-col items-center ${index === 0 ? 'pl-4' : 'pl-3'} ${index !== trendingPeople.length - 1 ? 'pr-3' : 'pr-4'}`}
             >
-              <div className="w-16 h-16 rounded-full border-2 border-gray-200 overflow-hidden mb-2">
-                <div className="w-full h-full bg-gray-200 rounded-full flex items-center justify-center">
-                  <span className="text-gray-500 text-xs">Image</span>
+              <div className="relative p-[3px] mb-2 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500">
+                <div className="w-16 h-16 rounded-full bg-white p-[2px]">
+                  <div className="w-full h-full bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+                    <span className="text-gray-500 text-xs">Image</span>
+                  </div>
                 </div>
               </div>
               <span className="text-sm text-center">{person.name}</span>

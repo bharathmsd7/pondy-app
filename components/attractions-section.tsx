@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 import { useState, useRef } from 'react';
-import { Heart } from 'lucide-react';
+import { Heart, ArrowRight } from 'lucide-react';
 import { Attraction, attractionsData } from './attractions-data';
 
 export function AttractionsSection() {
@@ -55,7 +55,7 @@ export function AttractionsSection() {
       <h2 className="text-xl font-semibold mb-4">Popular Attractions</h2>
       <div 
         ref={containerRef}
-        className="relative h-[400px] w-full max-w-[300px] mx-auto touch-none perspective-1000"
+        className="relative  h-[400px] w-full max-w-[300px] mx-auto touch-none perspective-1000"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -111,9 +111,10 @@ export function AttractionsSection() {
                     }`}
                   />
                 </button>
-                <h3 className="absolute bottom-4 left-4 text-white text-xl font-semibold">
-                  {attraction.title}
-                </h3>
+                <div className="absolute bottom-4 inset-x-4 flex justify-between items-center">
+                  <h3 className="text-white text-xl font-semibold">{attraction.title}</h3>
+                  <ArrowRight className="text-white w-12 h-12" />
+                </div>
               </div>
             </div>
           );
