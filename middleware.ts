@@ -14,7 +14,7 @@ export function middleware(request: NextRequest) {
   // Check onboarding status for root path
   if (pathname === '/') {
     if (!isOnboardingCompleted) {
-      return NextResponse.redirect(new URL('/onboarding', request.url));
+      return NextResponse.redirect(new URL('/onboarding-v2', request.url));
     }
     // if (!loggedIn) {
     //   return NextResponse.redirect(new URL('/auth/login', request.url));
