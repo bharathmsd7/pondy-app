@@ -1,7 +1,7 @@
-export default function ActivityPage() {
+export default function ExplorePage() {
     return (
       <div className="flex items-center justify-center h-screen">
-        Activites
+        Explore
       </div>
     )
   }

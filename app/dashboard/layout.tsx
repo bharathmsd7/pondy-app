@@ -1,5 +1,5 @@
 "use client";
-import { Home, Sailboat, CarFront, Package2, TreePalm } from 'lucide-react'
+import { Home, Compass, CarFront, Package2, TreePalm } from 'lucide-react'
 import { NavBar } from "@/components/ui/tubelight-navbar"
 
 export default function HomeLayout({
@@ -10,7 +10,7 @@ export default function HomeLayout({
 
   const navItems = [
     { name: 'Home', url: '/dashboard', icon: Home },
-    { name: 'Activites', url: 'activites', icon: Sailboat },
+    { name: 'Explore', url: 'explore', icon: Compass },
     { name: 'Rentals', url: 'rentals', icon: CarFront },
     { name: 'Places', url: 'places', icon: TreePalm },
     { name: 'Packages', url: 'packages', icon: Package2 }
