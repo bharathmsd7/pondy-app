@@ -41,7 +41,7 @@ const ExplorePage = () => {
             {/* <Map
                 {...viewport}
                 onViewportChange={setViewport}
-                mapboxAccessToken="sk.eyJ1IjoiYmhhcmF0aGRldjciLCJhIjoiY203OTlkbWtsMDJyYzJsc2VrY3gyanlyayJ9.Yj-4RiwTJgBpqRxOVJULBQ"
+                mapboxAccessToken=""
             >
                 {popularPlaces.map(place => (
                     <Marker
