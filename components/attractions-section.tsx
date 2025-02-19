@@ -113,7 +113,11 @@ export function AttractionsSection() {
                 </button>
                 <div className="absolute bottom-4 inset-x-4 flex justify-between items-center">
                   <h3 className="text-white text-xl font-semibold">{attraction.title}</h3>
-                  <ArrowRight className="text-white w-12 h-12" />
+                  <button
+                    className="p-2 rounded-full bg-white/20 backdrop-blur-sm"
+                  >
+                    <ArrowRight className="text-white w-6 h-6" />
+                  </button>
                 </div>
               </div>
             </div>

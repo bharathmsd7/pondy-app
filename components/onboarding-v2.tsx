@@ -102,7 +102,7 @@ const OnboardingV2: React.FC = () => {
               onClick={() => {
                 if (currentSlide === slides.length - 1) {
                 //   Cookies.set('isOnboardingCompleted', 'true');
-                  router.push('/');
+                  router.push('/auth/login');
                 } else {
                   nextSlide();
                 }
