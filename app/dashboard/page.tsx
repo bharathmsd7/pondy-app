@@ -1,7 +1,7 @@
 import { Search } from 'lucide-react';
 import { TrendingSection } from '@/components/dashboard/home/trending-section';
 import { AttractionsSection } from '@/components/dashboard/home/attractions-section';
-
+import { RestaurantsSection } from '@/components/dashboard/home/restaurants-section';
 export default function HomePage() {
   return (
     <div className="flex flex-col h-full bg-[#fafaf9]">
@@ -16,9 +16,10 @@ export default function HomePage() {
       </header>
 
       {/* Content */}
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-auto mb-20">
         <TrendingSection />
         <AttractionsSection />
+        <RestaurantsSection />
       </main>
     </div>
   );

@@ -53,9 +53,23 @@ export function AttractionsSection() {
   return (
     <section className="px-4 py-6">
       <h2 className="text-xl font-semibold mb-4">Popular Attractions</h2>
+      <div className="hidden md:block">
+        <div className="overflow-x-auto flex space-x-4 p-4">
+          {attractions.map((attraction, index) => (
+            <div key={attraction.id} className="w-64 bg-white rounded-lg shadow-md">
+              <img src={attraction.imageUrl} alt={attraction.title} className="w-full h-40 object-cover rounded-t-lg" />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold">{attraction.title}</h3>
+                <p className="text-gray-600">{attraction.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="md:hidden">
       <div 
         ref={containerRef}
-        className="relative  h-[400px] w-full max-w-[300px] mx-auto touch-none perspective-1000"
+        className="relative h-[400px] w-full max-w-[300px] mx-auto touch-none perspective-1000"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -123,6 +137,7 @@ export function AttractionsSection() {
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );
