@@ -60,7 +60,7 @@ export function AttractionsSection() {
               <img src={attraction.imageUrl} alt={attraction.title} className="w-full h-40 object-cover rounded-t-lg" />
               <div className="p-4">
                 <h3 className="text-lg font-semibold">{attraction.title}</h3>
-                <p className="text-gray-600">{attraction.description}</p>
+                {/* <p className="text-gray-600">{attraction.description}</p> */}
               </div>
             </div>
           ))}
