@@ -1,4 +1,4 @@
-import ExplorePage from '@/components/Explore-section';
+import ExplorePage from '@/components/dashboard/explore/Explore-section';
 
 export default function ExplorePageWrapper() {
     return (

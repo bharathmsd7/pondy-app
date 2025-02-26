@@ -1,5 +1,5 @@
 "use client"
-import OnboardingV2 from '@/components/onboarding-v2';
+import OnboardingV2 from '@/components/onboarding/onboarding-v2';
 
 export default function OnboardingV2Page() {
 

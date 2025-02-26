@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react';
-import { TrendingSection } from '@/components/trending-section';
-import { AttractionsSection } from '@/components/attractions-section';
+import { TrendingSection } from '@/components/dashboard/home/trending-section';
+import { AttractionsSection } from '@/components/dashboard/home/attractions-section';
 
 export default function HomePage() {
   return (
@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* Header */}
       <header className="flex justify-between items-center p-4">
         <div className="w-8 h-8 bg-gray-200 rounded flex items-center justify-center">
-          <span className="text-xs text-gray-500">Logo</span>
+          <img src="/icons/web-app-manifest-192x192.png" alt="Logo" />
         </div>
         <button className="p-2 hover:bg-gray-100 rounded-full">
           <Search className="w-6 h-6" />
