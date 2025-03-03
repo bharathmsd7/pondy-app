@@ -22,7 +22,7 @@ const restaurants: Restaurant[] = [
 
 const RestaurantCard = ({ restaurant }: { restaurant: Restaurant }) => {
   return (
-    <Card className="w-64 h-64 flex-shrink-0 relative">
+    <Card className="w-64 h-64 flex-shrink-0 relative shadow-lg">
       <div className="relative">
         <img src={restaurant.image} alt={restaurant.name} className="w-full h-64 object-cover rounded-lg" />
         <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black to-transparent rounded-lg"> 
