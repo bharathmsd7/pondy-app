@@ -1,7 +1,7 @@
 "use client"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Dialog, DialogContent, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
-import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
 interface TrendingEvent {
   id: number;
@@ -12,48 +12,36 @@ interface TrendingEvent {
 const trendingEvents: TrendingEvent[] = [
   {
     id: 1,
-    name: "Flower Show",
+    name: "Botanical Garden",
     image: "/images/botanical-garden.jpg"
   },
   {
     id: 2,
-    name: "New year",
+    name: "French Quarter",
     image: "/images/french-quarter.jpg"
   },
   {
     id: 3,
-    name: "Car Show",
+    name: "Auroville",
     image: "/images/auroville.jpg"
   },
   {
     id: 4,
-    name: "Mike Chen",
+    name: "Paradise Beach",
     image: "/images/paradise-beach.jpg"
   },
   {
     id: 5,
-    name: "Lisa Kumar",
-    image: "/images/french-quarter.jpg"
-  },
-  {
-    id: 6,
-    name: "Lisa Kumar",
-    image: "/images/auroville.jpg"
-  },
-  {
-    id: 7,
-    name: "Lisa Kumar",
+    name: "Rock Beach",
     image: "/images/rock-beach.jpg"
   }
 ];
 
 export function TrendingSection() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
+  const router = useRouter();
 
-  const openModal = (image: string) => {
-    setSelectedImage(image);
-    setIsOpen(true);
+  const navigateToPlace = (id: number) => {
+    router.push(`/dashboard/places/${id}`);
   };
 
 
@@ -65,7 +53,7 @@ export function TrendingSection() {
           {trendingEvents.map((event, index) => (
             <div 
               key={event.id} 
-              onClick={() => openModal(event.image)} 
+              onClick={() => navigateToPlace(event.id)} 
               className={`flex flex-col items-center cursor-pointer ${index === 0 ? 'pl-4' : 'pl-3'} ${index !== trendingEvents.length - 1 ? 'pr-3' : 'pr-4'}`}
             >
               <div className="relative p-[3px] mb-2 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500">
@@ -75,19 +63,13 @@ export function TrendingSection() {
                   </div>
                 </div>
               </div>
-              <span className="text-sm text-center">{event.name}</span>
+              <span className="text-xs text-center">{event.name}</span>
             </div>
           ))}
         </div>
         <ScrollBar orientation="horizontal" className="hidden" />
       </ScrollArea>
-      <Dialog open={isOpen} onOpenChange={setIsOpen} >
-        <DialogOverlay className="fixed inset-0" />
-        <DialogTitle></DialogTitle>
-        <DialogContent className="w-full h-full overflow-hidden p-0">
-          <img src={selectedImage} alt="Full Screen" className="w-full h-full object-cover" />
-        </DialogContent>
-      </Dialog>
+
     </div>
   );
 }
