@@ -3,6 +3,7 @@ import { Search } from 'lucide-react';
 import { TrendingSection } from '@/components/dashboard/home/trending-section';
 import { AttractionsSection } from '@/components/dashboard/home/attractions-section';
 import { RestaurantsSection } from '@/components/dashboard/home/restaurants-section';
+import { WhatToDoSection } from '@/components/dashboard/home/what-to-do-section';
 export default function HomePage() {
   return (
     <div className="flex flex-col h-full bg-[#fafaf9]">
@@ -20,6 +21,7 @@ export default function HomePage() {
       <main className="flex-1 overflow-auto mb-20">
         <TrendingSection />
         <AttractionsSection />
+        <WhatToDoSection />
         <RestaurantsSection />
       </main>
     </div>
