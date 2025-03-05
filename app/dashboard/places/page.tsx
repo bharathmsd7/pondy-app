@@ -4,7 +4,7 @@ import { Hotel, Star, Stars, MapPin, Eye, TicketCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const hotelCategories = [
+const placesCategories = [
   { name: "Top Attractions", icon: Eye },
   { name: "Events", icon: TicketCheck },
 ];
@@ -47,7 +47,7 @@ const popularHotels = [
   },
 ];
 
-const allHotels = [
+const allPlaces = [
     {
       id: 6,
       name: "Matri Mandir",
@@ -106,7 +106,7 @@ const allHotels = [
     },
   ];
 
-export default function HotelsPage() {
+export default function PlacesPage() {
   return (
     <main className="min-h-screen mb-20">
     {/* Hero Section with Gradient Overlay */}
@@ -131,7 +131,7 @@ export default function HotelsPage() {
       <div className="absolute left-0 right-0 bottom-0 translate-y-1/2 px-4 md:px-8">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 gap-2 md:gap-2">
-            {hotelCategories.map((category, index) => (
+            {placesCategories.map((category, index) => (
               <Link
                 key={index}
                 href={`/hotels/category/${category.name.toLowerCase().replace(" ", "-")}`}
@@ -195,7 +195,7 @@ export default function HotelsPage() {
       <h2 className="text-2xl font-bold mb-4">All Places</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {allHotels.map((hotel) => (
+        {allPlaces.map((hotel) => (
           <Link
             key={hotel.id}
             href={`/hotels/${hotel.id}`}
