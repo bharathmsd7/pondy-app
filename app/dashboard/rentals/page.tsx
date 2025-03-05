@@ -1,8 +1,7 @@
-export default function RentalPage() {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        Rentals
-      </div>
-    )
-  }
+
+import { RentalPage } from '@/components/dashboard/rentals/rental-page';
+
+export default function RentalsPageWrapper() {
+  return <RentalPage />;
+}
   

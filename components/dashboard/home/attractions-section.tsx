@@ -51,11 +51,11 @@ export function AttractionsSection() {
   };
 
   return (
-    <section className="px-4 py-6">
-      <h2 className="text-xl font-semibold mb-4">Popular Attractions</h2>
+    <section className="pr-4 pb-6">
+      <h2 className="text-xl pl-4 font-semibold mb-4">Popular Attractions</h2>
       <div className="hidden md:block">
         <div className="overflow-x-auto flex space-x-4 p-4">
-          {attractions.map((attraction, index) => (
+          {attractions.map((attraction) => (
             <div key={attraction.id} className="w-64 bg-white rounded-lg shadow-md">
               <img src={attraction.imageUrl} alt={attraction.title} className="w-full h-40 object-cover rounded-t-lg" />
               <div className="p-4">
