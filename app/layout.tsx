@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+import { Lexend } from 'next/font/google'
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import { Analytics } from "@vercel/analytics/react"
@@ -6,7 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 // import { PWAPrompt } from '@/components/pwa-prompt';
 import type { Metadata, Viewport } from "next";
 
-const inter = Inter({ subsets: ['latin'] })
+const lexend = Lexend({ subsets: ['latin'] })
 
 const APP_NAME = "Visit Pondy";
 const APP_DEFAULT_TITLE = "Visit Pondy";
@@ -67,7 +67,7 @@ export default function RootLayout({
         <meta name="HandheldFriendly" content="true" />
       </head>
       <body
-        className={inter.className}
+        className={lexend.className}
         style={{ touchAction: 'pan-x pan-y' }}
       >
         <Toaster richColors  />

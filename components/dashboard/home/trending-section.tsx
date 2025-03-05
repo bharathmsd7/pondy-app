@@ -59,7 +59,7 @@ export function TrendingSection() {
 
   return (
     <div className="py-3">
-      <h2 className="text-lg font-semibold mb-4 px-4">This weeks trending</h2>
+      {/* <h2 className="text-lg font-semibold mb-4 px-4">This weeks trending</h2> */}
       <ScrollArea className="w-full whitespace-nowrap">
         <div className="flex">
           {trendingEvents.map((event, index) => (

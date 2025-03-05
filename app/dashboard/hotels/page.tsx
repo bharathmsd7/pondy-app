@@ -72,13 +72,6 @@ const allHotels = [
       image: "/images/hotels/la-villa.jpg",
     },
     {
-      id: 9,
-      name: "The Windflower Resort",
-      rating: 4.2,
-      location: "Periya Mudaliar Chavadi",
-      image: "/images/hotels/windflower.jpg",
-    },
-    {
       id: 10,
       name: "Le Royal Park",
       rating: 3.8,
@@ -110,7 +103,7 @@ const allHotels = [
 
 export default function HotelsPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen mb-20">
       {/* Hero Section with Gradient Overlay */}
       <div className="relative h-[250px] md:h-[450px]">
         <Image
@@ -188,7 +181,7 @@ export default function HotelsPage() {
               </Link>
             ))}
           </div>
-          <ScrollBar orientation="horizontal" />
+          <ScrollBar orientation="horizontal" className="hidden" />
         </ScrollArea>
       </div>
 
