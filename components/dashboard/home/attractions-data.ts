@@ -57,6 +57,13 @@ export const attractionsData: Record<CategoryType, Attraction[]> = {
   ],
   experiences: [
     {
+        id: 'e3',
+        title: 'Pottery Workshop',
+        imageUrl: '/images/popular/pottery.jpg',
+        description: 'Create your own pottery with local artisans',
+        isFavorite: false,
+      },
+    {
       id: 'e1',
       title: 'Surfing School',
       imageUrl: '/images/popular/surfing.jpg',
@@ -68,13 +75,6 @@ export const attractionsData: Record<CategoryType, Attraction[]> = {
       title: 'Yoga Retreat',
       imageUrl: '/images/popular/yoga.jpg',
       description: 'Traditional yoga sessions in peaceful settings',
-      isFavorite: false,
-    },
-    {
-      id: 'e3',
-      title: 'Pottery Workshop',
-      imageUrl: '/images/popular/pottery.jpg',
-      description: 'Create your own pottery with local artisans',
       isFavorite: false,
     },
   ],
