@@ -69,14 +69,14 @@ export function ProfileDrawer({ children }: { children: React.ReactNode }) {
       <DrawerTrigger asChild>
         {children}
       </DrawerTrigger>
-      <DrawerContent className="h-[95%] p-4">
-        <DrawerHeader>
-          <DrawerTitle className="text-2xl font-bold mb-2 hidden">Profile</DrawerTitle>
+      <DrawerContent className="h-[85%] px-4">
+        <DrawerHeader className="px-0 hidden">
+          <DrawerTitle className="text-2xl font-bold">Profile</DrawerTitle>
         </DrawerHeader>
         
-        <div className="space-y-4">
+        <div className="space-y-4 overflow-y-auto h-[calc(100%-2rem)] pr-2 no-scrollbar">
           {/* Main Sections */}
-          <div className="space-y-2">
+          <div className="">
             <div className="flex items-center space-x-3 p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
               <User className="w-5 h-5" />
               <span>My Profile</span>
