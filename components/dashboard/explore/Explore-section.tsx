@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
-import React, { useEffect, useState } from 'react';
-import Map, { Marker } from 'react-map-gl/mapbox';
+import React, { useState } from 'react';
+import Map, { Marker, ViewState } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const popularPlaces = [
@@ -13,51 +14,56 @@ const popularPlaces = [
 ];
 
 const ExplorePage = () => {
-    const [viewport, setViewport] = useState({
+    const [viewState, setViewState] = useState<ViewState>({
         latitude: popularPlaces[0].latitude,
         longitude: popularPlaces[0].longitude,
-        width: '100%',
-        height: '100vh',
         zoom: 14,
+        bearing: 0,
+        pitch: 0,
+        padding: { top: 0, bottom: 0, left: 0, right: 0 }
     });
 
     const [selectedPlace, setSelectedPlace] = useState(popularPlaces[0]);
 
-    useEffect(() => {
-        setViewport(prev => ({ ...prev, latitude: selectedPlace.latitude, longitude: selectedPlace.longitude }));
-    }, [selectedPlace]);
+    const handlePlaceClick = (place: typeof popularPlaces[0]) => {
+        setSelectedPlace(place);
+        setViewState({
+            ...viewState,
+            latitude: place.latitude,
+            longitude: place.longitude,
+        });
+    };
+
     return (
         <div className="flex flex-col h-screen w-screen">
             <Map
+                {...viewState}
+                onMove={evt => setViewState(evt.viewState)}
                 mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
-                initialViewState={viewport}
-                // style={{ width: 900, height: 900 }}
+                style={{ width: '100%', height: '100%' }}
                 mapStyle="mapbox://styles/mapbox/streets-v9"
             >
-                <Marker longitude={12.02203} latitude={79.84992} anchor="bottom" >
-                    
-                </Marker>
-            </Map>
-            {/* <Map
-                {...viewport}
-                onViewportChange={setViewport}
-                mapboxAccessToken=""
-            >
-                {popularPlaces.map(place => (
+                {popularPlaces.map((place) => (
                     <Marker
                         key={place.name}
                         latitude={place.latitude}
                         longitude={place.longitude}
-                    >
-                        <div className="marker" />
-                    </Marker>
+                        anchor="bottom"
+                        color={selectedPlace === place ? '#ff0000' : '#000000'}
+                    />
                 ))}
-            </Map> */}
-            <div className="overflow-x-auto mt-4">
-                <div className="flex space-x-4">
+            </Map>
+
+            <div className="w-full overflow-x-auto pb-28 md:pb-8 pt-2 px-4 no-scrollbar">
+                <div className="flex space-x-4 min-w-min">
                     {popularPlaces.map(place => (
-                        <div key={place.name} className="bg-white rounded-lg shadow-lg p-4 flex w-64 md:w-80 lg:w-96" onClick={() => setSelectedPlace(place)}>
-                            <img src={place.image} alt={place.name} className="w-1/3 h-auto rounded-l-lg" />
+                        <div 
+                            key={place.name} 
+                            className={`flex-shrink-0 bg-white rounded-lg shadow-lg p-4 flex w-[300px] cursor-pointer
+                                ${selectedPlace === place ? 'ring-2 ring-blue-500' : ''}`}
+                            onClick={() => handlePlaceClick(place)}
+                        >
+                            <img src={place.image} alt={place.name} className="w-1/3 h-auto rounded-l-lg object-cover" />
                             <div className="flex-1 p-2">
                                 <h3 className="font-bold text-lg">{place.name}</h3>
                                 <p>{place.area}</p>
