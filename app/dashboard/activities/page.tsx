@@ -17,8 +17,8 @@ const activities: Activity[] = [
   {
     id: '1',
     title: 'Bird Watching',
-    description: 'Odisha is home to more than 400 species of birds, one of the best bird watching destinations in India.',
-    image: '/images/places/bird-watching.jpg',
+    description: 'Puducherry is home to more than 400 species of birds, one of the best bird watching destinations in India.',
+    image: '/images/bird.jpg',
     category: 'Activities'
   },
   {
@@ -52,7 +52,7 @@ export default function ActivitiesPage() {
       {/* Hero Section */}
       <div className="relative h-[40vh]">
         <img
-          src="/images/places/activities-hero.jpg"
+          src="/activities/day-out.jpg"
           alt="Activities"
           className="w-full h-full object-cover"
         />
