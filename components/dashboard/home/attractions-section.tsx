@@ -1,16 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
-import { useState, useRef } from 'react';
+"use client";
+import { useState, useRef, useEffect } from 'react';
 import { Heart, ArrowRight } from 'lucide-react';
-import { Attraction, attractionsData } from './attractions-data';
+import { Attraction, CategoryType, attractionsData } from './attractions-data';
 
 export function AttractionsSection() {
-  const [attractions, setAttractions] = useState<Attraction[]>(attractionsData);
+  const [activeTab, setActiveTab] = useState<CategoryType>('food');
+  const [attractions, setAttractions] = useState<Attraction[]>(attractionsData[activeTab]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [offsetX, setOffsetX] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setAttractions(attractionsData[activeTab]);
+    setCurrentIndex(0);
+    setOffsetX(0);
+  }, [activeTab]);
 
   const handleTouchStart = (e: React.TouchEvent | React.MouseEvent) => {
     setIsDragging(true);
@@ -50,9 +57,32 @@ export function AttractionsSection() {
     ));
   };
 
+  const tabs: { id: CategoryType; label: string }[] = [
+    { id: 'food', label: 'Food' },
+    { id: 'sights', label: 'Sights & Attractions' },
+    { id: 'shopping', label: 'Shopping' },
+    { id: 'experiences', label: 'Experiences' },
+  ];
+
   return (
-    <section className="pr-4 pb-6">
+    <section className=" pb-6">
       <h2 className="text-xl pl-4 font-semibold mb-4">Popular Attractions</h2>
+      <div className="mb-6 pl-4 flex space-x-2 overflow-x-auto no-scrollbar">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-4 py-2 rounded-full whitespace-nowrap transition-colors ${
+              activeTab === tab.id
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
       <div className="hidden md:block">
         <div className="overflow-x-auto flex space-x-4 p-4">
           {attractions.map((attraction) => (
@@ -60,7 +90,7 @@ export function AttractionsSection() {
               <img src={attraction.imageUrl} alt={attraction.title} className="w-full h-40 object-cover rounded-t-lg" />
               <div className="p-4">
                 <h3 className="text-lg font-semibold">{attraction.title}</h3>
-                {/* <p className="text-gray-600">{attraction.description}</p> */}
+                <p className="text-gray-600 text-sm mt-2">{attraction.description}</p>
               </div>
             </div>
           ))}
