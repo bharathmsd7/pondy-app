@@ -12,13 +12,13 @@ interface TrendingEvent {
 const trendingEvents: TrendingEvent[] = [
   {
     id: 1,
-    name: "Botanical Garden",
-    image: "/images/botanical-garden.jpg"
+    name: "Rock Beach",
+    image: "/images/rock-beach.jpg"
   },
   {
     id: 2,
-    name: "French Quarter",
-    image: "/images/french-quarter.jpg"
+    name: "White Town",
+    image: "/images/wt1.jpg"
   },
   {
     id: 3,
@@ -32,8 +32,8 @@ const trendingEvents: TrendingEvent[] = [
   },
   {
     id: 5,
-    name: "Rock Beach",
-    image: "/images/rock-beach.jpg"
+    name: "Bharathi Park",
+    image: "/images/b1.jpg"
   }
 ];
 
