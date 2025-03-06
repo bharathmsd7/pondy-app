@@ -65,7 +65,7 @@ const allPlaces = [
     {
       id: 8,
       name: "Ousteri Lake",
-      rating: 4.0,
+      rating: 4.1,
       location: "Ousteri",
       image: "/images/places/ousteri_lake.jpg",
     },
