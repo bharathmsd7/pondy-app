@@ -3,103 +3,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Hotel, Star, Stars, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const hotelCategories = [
-  { name: "All types", icon: Hotel },
-  { name: "Two Star", icon: Stars },
-  { name: "Three Star", icon: Stars },
-  { name: "Four Star", icon: Stars },
-];
-
-const popularHotels = [
-  {
-    id: 1,
-    name: "Le Pondy Beach Resort",
-    rating: 4.5,
-    location: "Pondicherry Beach",
-    image: "/images/hotels/le-pondy.jpg",
-  },
-  {
-    id: 2,
-    name: "Villa Shanti",
-    rating: 4.3,
-    location: "French Quarter",
-    image: "/images/hotels/villa-shanti.jpeg",
-  },
-  {
-    id: 3,
-    name: "Palais de Mahe",
-    rating: 4.7,
-    location: "White Town",
-    image: "/images/hotels/palais-de-mahe.jpg",
-  },
-  {
-    id: 4,
-    name: "The Promenade",
-    rating: 4.2,
-    location: "Rock Beach",
-    image: "/images/hotels/the-promenade.jpg",
-  },
-  {
-    id: 5,
-    name: "Ocean Spray",
-    rating: 4.4,
-    location: "ECR Road",
-    image: "/images/hotels/ocean-spray.jpg",
-  },
-];
-
-const allHotels = [
-    {
-      id: 6,
-      name: "Hotel Atithi",
-      rating: 3.9,
-      location: "J.N. Street",
-      image: "/images/hotels/hotel-atithi.jpg",
-    },
-    {
-      id: 7,
-      name: "Sunway GRT",
-      rating: 4.0,
-      location: "Auroville Main Road",
-      image: "/images/hotels/sunway-grt.jpg",
-    },
-    {
-      id: 8,
-      name: "La Villa",
-      rating: 4.4,
-      location: "Heritage Town",
-      image: "/images/hotels/la-villa.jpg",
-    },
-    {
-      id: 10,
-      name: "Le Royal Park",
-      rating: 3.8,
-      location: "Bussy Street",
-      image: "/images/hotels/le-royal-park.jpg",
-    },
-    {
-      id: 11,
-      name: "Hotel Kailash",
-      rating: 3.5,
-      location: "S.V. Patel Salai",
-      image: "/images/hotels/hotel-kailash.jpg",
-    },
-    {
-      id: 12,
-      name: "Anandha Inn",
-      rating: 3.7,
-      location: "Shivaji Garden",
-      image: "/images/hotels/anandha-inn.jpg",
-    },
-    {
-      id: 13,
-      name: "Maison Perumal",
-      rating: 4.6,
-      location: "Tamil Quarter",
-      image: "/images/hotels/maison-perumal.jpg",
-    },
-  ];
+import { hotelCategories, popularHotels, allHotels } from "@/app/lib/data/hotels";
 
 export default function HotelsPage() {
   return (
@@ -156,7 +60,7 @@ export default function HotelsPage() {
             {popularHotels.map((hotel) => (
               <Link
                 key={hotel.id}
-                href={`/hotels/${hotel.id}`}
+                href={`/dashboard/hotels/${hotel.id}`}
                 className="w-[280px] shrink-0 rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="relative h-[180px] w-full">
@@ -193,7 +97,7 @@ export default function HotelsPage() {
           {allHotels.map((hotel) => (
             <Link
               key={hotel.id}
-              href={`/hotels/${hotel.id}`}
+              href={`/dashboard/hotels/${hotel.id}`}
               className="rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="relative h-[180px] w-full">
