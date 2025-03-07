@@ -5,14 +5,16 @@ import { Heart, Share, ChevronLeft, Wifi, Coffee, UtensilsCrossed, Flower2 } fro
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default async function HotelDetailPage({
-    params,
-  }: {
-    params: Promise<{ id: number }>
-  }) {
-    const { id } = await params
-  
-  const hotel = getHotelById(id);
+interface Props {
+  params: {
+    id: string;
+  };
+}
+
+export default async function HotelDetailPage({ params }: Props) {
+  // Make the function async and await the params
+  const { id } = await params;
+  const hotel = getHotelById(Number(id));
 
   if (!hotel) {
     notFound();
@@ -46,6 +48,7 @@ export default async function HotelDetailPage({
         </div>
       </div>
 
+      {/* Rest of your component remains unchanged */}
       {/* Hotel Info Section */}
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
