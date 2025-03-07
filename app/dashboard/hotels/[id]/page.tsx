@@ -5,14 +5,14 @@ import { Heart, Share, ChevronLeft, Wifi, Coffee, UtensilsCrossed, Flower2 } fro
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-interface Props {
-  params: {
-    id: string;
-  };
-}
-
-export default function HotelDetailPage({ params }: Props) {
-  const hotel = getHotelById(Number(params.id));
+export default async function HotelDetailPage({
+    params,
+  }: {
+    params: Promise<{ id: number }>
+  }) {
+    const { id } = await params
+  
+  const hotel = getHotelById(id);
 
   if (!hotel) {
     notFound();
