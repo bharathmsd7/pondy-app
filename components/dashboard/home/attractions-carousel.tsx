@@ -73,7 +73,7 @@ export const AttractionsCarousel = () => {
                   onToggle={() => {}}
                   className="absolute top-2 right-2 text-white backdrop-blur-md"
                 />
-                <div className="absolute bottom-0 m-2 p-2 backdrop-blur-md rounded-lg">
+                <div className="absolute bottom-0 m-2 px-2 py-1 backdrop-blur-md rounded-lg">
                   <div>
                     <h3 className="text-white font-semibold text-lg">
                       {attraction.title}
@@ -86,6 +86,24 @@ export const AttractionsCarousel = () => {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+
+        {/* Pagination Indicators */}
+        <div className="flex justify-center gap-2 mt-4">
+          {items.map((_, index) => (
+            <motion.div
+              key={index}
+              className={`h-1 rounded-full ${
+                currentIndex === index ? 'w-6 bg-primary' : 'w-2 bg-gray-300'
+              }`}
+              animate={{
+                width: currentIndex === index ? 24 : 8,
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+            />
+          ))}
         </div>
       </div>
     </div>
