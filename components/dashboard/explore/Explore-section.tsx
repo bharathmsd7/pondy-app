@@ -9,39 +9,39 @@ type Category = typeof categories[number];
 
 const placesByCategory = {
     Beaches: [
-        { name: 'Paradise Beach', area: 'Chunnambar', time: '9am - 5pm', latitude: 11.8882, longitude: 79.8063, image: '/images/paradise-beach.jpg' },
-        { name: 'Promenade Beach', area: 'White Town', time: '24/7', latitude: 11.9321, longitude: 79.8351, image: '/images/promenade-beach.jpg' },
-        { name: 'Serenity Beach', area: 'Kottakuppam', time: '24/7', latitude: 11.9775, longitude: 79.8530, image: '/images/serenity-beach.jpg' },
-        { name: 'Auro Beach', area: 'Auroville', time: '24/7', latitude: 11.9715, longitude: 79.8427, image: '/images/auro-beach.jpg' },
+        { name: 'Paradise Beach', area: 'Chunnambar', time: '9am - 5pm', latitude: 11.873628576111534, longitude: 79.82117436599387, image: '/images/explore/beaches/paradise-beach.jpg' },
+        { name: 'Promenade Beach', area: 'White Town', time: '24/7', latitude: 11.93327411490338, longitude:79.83614236144241, image: '/images/explore/beaches/promenade-beach.jpg' },
+        { name: 'Serenity Beach', area: 'Kottakuppam', time: '6am - 6pm', latitude: 11.969243978848848, longitude: 79.84459567434908 ,image: '/images/explore/beaches/serenity-beach.png' },
+        { name: 'Auro Beach', area: 'Auroville', time: '7am - 6:30pm', latitude: 12.001320863878785, longitude: 79.85510024777128, image: '/images/explore/beaches/auro-beach.jpeg' },
     ],
     Temples: [
-        { name: 'Manakula Vinayagar Temple', area: 'White Town', time: '5:30am - 12:30pm & 4pm - 9pm', latitude: 11.9339, longitude: 79.8345, image: '/images/manakula-temple.jpg' },
-        { name: 'Varadaraja Perumal Temple', area: 'Heritage Town', time: '6am - 12pm & 4pm - 8pm', latitude: 11.9367, longitude: 79.8308, image: '/images/varadaraja-temple.jpg' },
-        { name: 'Vedhapureeswarar Temple', area: 'Heritage Town', time: '6am - 12pm & 4:30pm - 8:30pm', latitude: 11.9330, longitude: 79.8328, image: '/images/vedhapureeswarar-temple.jpg' },
+        { name: 'Manakula Vinayagar Temple', area: 'White Town', time: '5:30am - 12:30pm & 4pm - 9pm', latitude: 11.93603801014409, longitude: 79.83367282491899 , image: '/images/explore/temples/manakula-vinayagar-temple.jpg' },
+        { name: 'Sri Varadaraja Perumal Temple', area: 'Heritage Town', time: '6am - 12pm & 4pm - 8pm', latitude: 11.941178372291377, longitude: 79.83014791428455 ,  image: '/images/explore/temples/varadaraja-temple.jpg' },
+        { name: 'Shri Vedapuriswarar Temple', area: 'Heritage Town', time: '6am - 12pm & 4:30pm - 8:30pm', latitude: 11.939980029084053, longitude: 79.82976515008134, image: '/images/explore/temples/vedhapureeswarar-temple.jpg' },
     ],
     Activities: [
-        { name: 'Scuba Diving', area: 'Serenity Beach', time: '8am - 4pm', latitude: 11.9775, longitude: 79.8530, image: '/images/scuba.jpg' },
-        { name: 'Auroville Meditation Center', area: 'Auroville', time: '9am - 5pm', latitude: 12.0069, longitude: 79.8106, image: '/images/auroville.jpg' },
-        { name: 'Boat House', area: 'Chunnambar', time: '9am - 5pm', latitude: 11.8882, longitude: 79.8063, image: '/images/boat-house.jpg' },
+        { name: 'Scuba Diving', area: 'Serenity Beach', time: '8am - 4pm', latitude: 11.925496279112068, longitude: 79.82801355272586, image: '/images/explore/activities/scuba-diving.jpg' },
+        { name: 'Auroville Meditation Center', area: 'Auroville', time: '9am - 5pm', latitude: 12.0069, longitude: 79.8106, image: '/images/explore/activities/auroville.jpg' },
+        { name: 'Chunnambar Boat House', area: 'Chunnambar', time: '9am - 5pm', latitude: 11.884307884797636, longitude: 79.80069305248892, image: '/images/explore/activities/chunnambar-boat-house.jpg' },
     ],
     Hotels: [
-        { name: 'La Villa', area: 'White Town', time: '24/7', latitude: 11.9338, longitude: 79.8357, image: '/images/la-villa.jpg' },
-        { name: 'Palais de Mahe', area: 'White Town', time: '24/7', latitude: 11.9334, longitude: 79.8361, image: '/images/palais-mahe.jpg' },
-        { name: 'The Promenade', area: 'White Town', time: '24/7', latitude: 11.9325, longitude: 79.8361, image: '/images/promenade-hotel.jpg' },
+        { name: 'La Villa', area: 'White Town', time: '24/7', latitude: 11.9338, longitude: 79.8357, image: '/images/explore/hotels/la-villa.jpg' },
+        { name: 'Palais de Mahe', area: 'White Town', time: '24/7', latitude: 11.9334, longitude: 79.8361, image: '/images/explore/hotels/palais-de-mahe.jpg' },
+        { name: 'The Promenade', area: 'White Town', time: '24/7', latitude: 11.9325, longitude: 79.8361, image: '/images/explore/hotels/the-promenade.jpg' },
     ],
     Restaurants: [
-        { name: 'Carte Blanche', area: 'White Town', time: '12pm - 10pm', latitude: 11.9339, longitude: 79.8357, image: '/images/carte-blanche.jpg' },
-        { name: 'La Villa Restaurant', area: 'White Town', time: '12pm - 10pm', latitude: 11.9338, longitude: 79.8357, image: '/images/la-villa-restaurant.jpg' },
-        { name: 'Surguru Restaurant', area: 'Heritage Town', time: '7am - 10:30pm', latitude: 11.9367, longitude: 79.8308, image: '/images/surguru.jpg' },
+        { name: 'Writer\'s cafe', area: 'H.M.Kassim Salai', time: '12pm - 10pm', latitude: 11.935208138765786,  longitude: 79.8325229402585, image: '/images/explore/restaurants/writers-cafe.jpg' },
+        { name: 'Auroville Bakery', area: 'Auroville', time: '12pm - 10pm', latitude: 11.990069693878496, longitude: 79.83470714307332, image: '/images/explore/restaurants/auroville-bakery.jpg' },
+        { name: 'Surguru Veg Restaurant', area: 'Bussy Street', time: '7am - 10:30pm', latitude: 11.929592915856952, longitude:  79.82841944525198,  image: '/images/explore/restaurants/surguru-pure-veg-hotel.jpg' },
     ],
 };
 
 const categoryImages = {
-    Beaches: '/images/beach-category.jpg',
-    Temples: '/images/temple-category.jpg',
-    Activities: '/images/activities-category.jpg',
-    Hotels: '/images/hotels-category.jpg',
-    Restaurants: '/images/restaurants-category.jpg',
+    Beaches: '/images/explore/beaches/promenade-beach.jpg',
+    Temples: '/images/explore/temples/manakula-vinayagar-temple-category.jpg',
+    Activities: '/images/explore/activities/activities-category.jpg',
+    Hotels: '/images/explore/hotels/palais-de-mahe-category.jpg',
+    Restaurants: '/images/explore/restaurants/restaurant-category.jpg',
 };
 
 const ExplorePage = () => {
