@@ -1,27 +1,24 @@
+"use client";
+
 import { getHotelById } from "@/app/lib/data/hotels";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import Image from "next/image";
 import { Heart, Share, ChevronLeft, Wifi, Coffee, UtensilsCrossed, Flower2 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-interface Props {
-  params: {
-    id: string;
-  };
-}
 
-export default async function HotelDetailPage({ params }: Props) {
-  // Make the function async and await the params
-  const { id } = await params;
-  const hotel = getHotelById(Number(id));
+export default function HotelDetailPage() {
+  const params = useParams();
+  const hotelId = params.id as string;
+  const hotel = getHotelById(Number(hotelId));
 
   if (!hotel) {
     notFound();
   }
 
   return (
-    <div className="max-w-md mx-auto bg-white shadow-sm rounded-lg overflow-hidden">
+    <div className="max-w-md mx-auto bg-white shadow-sm overflow-hidden">
       {/* Main Image Section */}
       <div className="relative w-full">
         <Image 

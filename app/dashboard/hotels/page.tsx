@@ -1,6 +1,6 @@
 // app/hotels/page.tsx
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Hotel, Star, Stars, MapPin } from "lucide-react";
+import { Star, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { hotelCategories, popularHotels, allHotels } from "@/app/lib/data/hotels";

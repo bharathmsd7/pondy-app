@@ -1,6 +1,6 @@
 // app/hotels/page.tsx
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Hotel, Star, Stars, MapPin, Eye, TicketCheck } from "lucide-react";
+import { Star, MapPin, Eye, TicketCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -161,7 +161,7 @@ export default function PlacesPage() {
           {popularHotels.map((hotel) => (
             <Link
               key={hotel.id}
-              href={`/hotels/${hotel.id}`}
+              href={`/dashboard/places/${hotel.id}`}
               className="w-[280px] shrink-0 rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="relative h-[180px] w-full">
