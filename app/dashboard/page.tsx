@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { TrendingSection } from '@/components/dashboard/home/trending-section';
 import { AttractionsSection } from '@/components/dashboard/home/attractions-section';
 import { RestaurantsSection } from '@/components/dashboard/home/restaurants-section';
 import { WhatToDoSection } from '@/components/dashboard/home/what-to-do-section';
 import { ProfileDrawer } from '@/components/dashboard/profile/profile-drawer';
+import { SearchBar } from '@/components/dashboard/search/search-bar';
 
 export default function HomePage() {
   return (
@@ -20,9 +20,9 @@ export default function HomePage() {
         </ProfileDrawer>
       </header>
 
-      {/* Content */}
+      {/* Rest of the content remains the same */}
       <main className="flex-1 overflow-auto mb-20">
-        <TrendingSection />
+        <SearchBar />
         <AttractionsSection />
         <WhatToDoSection />
         <RestaurantsSection />

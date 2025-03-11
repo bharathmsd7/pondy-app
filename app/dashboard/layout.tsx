@@ -10,9 +10,9 @@ export default function HomeLayout({
 
   const navItems = [
     { name: 'Home', url: '/dashboard', icon: Home },
+    { name: 'Hotels', url: 'hotels', icon: Hotel },
     { name: 'Explore', url: 'explore', icon: Compass },
     { name: 'Rentals', url: 'rentals', icon: CarFront },
-    { name: 'Hotels', url: 'hotels', icon: Hotel },
     { name: 'Places', url: 'places', icon: TreePalm },
   ];
   return (
