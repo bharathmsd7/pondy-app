@@ -17,7 +17,7 @@ const mockSearchData: SearchItem[] = [
   { id: '1', name: 'Paradise Beach', type: 'attraction', image: '/images/paradise-beach.jpg' },
   { id: '2', name: 'Le Cafe', type: 'restaurant', image: '/images/le-cafe.jpg' },
   { id: '3', name: 'Promenade Hotel', type: 'hotel', image: '/images/promenade.jpg' },
-  // Add more items...
+  // Add more items....
 ];
 
 export function SearchBar() {
