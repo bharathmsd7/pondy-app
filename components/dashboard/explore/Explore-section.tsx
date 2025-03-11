@@ -33,6 +33,21 @@ const placesByCategory = {
         { name: 'Writer\'s cafe', area: 'H.M.Kassim Salai', time: '12pm - 10pm', latitude: 11.935208138765786,  longitude: 79.8325229402585, image: '/images/explore/restaurants/writers-cafe.jpg' },
         { name: 'Auroville Bakery', area: 'Auroville', time: '12pm - 10pm', latitude: 11.990069693878496, longitude: 79.83470714307332, image: '/images/explore/restaurants/auroville-bakery.jpg' },
         { name: 'Surguru Veg Restaurant', area: 'Bussy Street', time: '7am - 10:30pm', latitude: 11.929592915856952, longitude:  79.82841944525198,  image: '/images/explore/restaurants/surguru-pure-veg-hotel.jpg' },
+        { name: 'Bay Bistro', area: 'Maraimalai Adigal St', time: '12pm - 10pm', latitude: 11.88271957455583, longitude: 79.82025753383931, image: '/images/explore/restaurants/bay-bistro.jpg' },
+        { name: 'Biriyani Brothers', area: 'Vallalar Salai Rd', time: '12pm - 10pm', latitude: 11.94358417929491, longitude: 79.82278934454224, image: '/images/explore/restaurants/biriyani-brothers.jpg' },
+        { name: 'Bismilla', area: 'Heritage Town', time: '12pm - 10pm', latitude: 11.938603764711951, longitude: 79.83118616711903, image: '/images/explore/restaurants/bismilla.jpeg' },
+        { name: 'Bistro', area: 'Pudupalaiyam', time: '12pm - 10pm', latitude: 11.932547679259898, longitude: 79.81761396785261, image: '/images/explore/restaurants/bistro.jpg' },
+        { name: 'Copper Kitchen', area: '100 ft Road', time: '12pm - 10pm', latitude: 11.933298930896024, longitude: 79.8076274095794, image: '/images/explore/restaurants/copper-kitchen.jpg' },
+        { name: 'De Fish House', area: 'Heritage Town', time: '12pm - 10pm', latitude: 11.940060509522343, longitude: 79.83112226724934, image: '/images/explore/restaurants/de-fish-house.jpg' },
+        { name: 'Kailash Parbat', area: 'Mission Street', time: '12pm - 10pm', latitude: 11.930798926735388, longitude: 79.8303000452604, image: '/images/explore/restaurants/Kailash Parbat.jpg' },
+        { name: 'Kamatchi', area: '100 ft Road', time: '12pm - 10pm', latitude: 11.928225765334087, longitude: 79.80716783198109, image: '/images/explore/restaurants/kamatchi.JPG' },
+        { name: 'Le Dupleix', area: 'White Town', time: '12pm - 10pm', latitude: 11.931132644229345, longitude: 79.8338040095794, image: '/images/explore/restaurants/oh-pondi.jpg' },
+        { name: 'Oh Pondi', area: 'South Boulevard', time: '12pm - 10pm', latitude: 11.931132644229345, longitude: 79.8338040095794, image: '/images/explore/restaurants/oh-pondi.jpg' },
+        { name: 'Pavilion', area: 'Anna Salai', time: '12pm - 10pm', latitude: 11.934090518123575, longitude: 79.82439802491896, image: '/images/explore/restaurants/pavilion.jpg' },
+        { name: 'Saucentoss', area: 'Nehru Street', time: '12pm - 10pm', latitude: 11.935890325869382, longitude: 79.83236562676312, image: '/images/explore/restaurants/saucentoss.jpg' },
+        { name: 'Villa Krish', area: 'White Town', time: '12pm - 10pm', latitude: 11.930263412841626, longitude: 79.83364663841424, image: '/images/explore/restaurants/villa-krish.jpg' },
+        { name: 'Cafe Veloute', area: 'Surcouf Street', time: '12pm - 10pm', latitude: 11.930423397047331, longitude: 79.8323205057961, image: '/images/explore/restaurants/cafe-veloute.jpg' },
+
     ],
 };
 
