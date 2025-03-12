@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Map, { Marker, ViewState, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const categories = ['Beaches', 'Temples', 'Activities', 'Hotels', 'Restaurants'] as const;
+const categories = ['Beaches', 'Temples', 'Churches', 'Parks', 'Activities', 'Hotels', 'Restaurants'] as const;
 type Category = typeof categories[number];
 
 const placesByCategory = {
@@ -18,6 +18,18 @@ const placesByCategory = {
         { name: 'Manakula Vinayagar Temple', area: 'White Town', time: '5:30am - 12:30pm & 4pm - 9pm', latitude: 11.93603801014409, longitude: 79.83367282491899 , image: '/images/explore/temples/manakula-vinayagar-temple.jpg' },
         { name: 'Sri Varadaraja Perumal Temple', area: 'Heritage Town', time: '6am - 12pm & 4pm - 8pm', latitude: 11.941178372291377, longitude: 79.83014791428455 ,  image: '/images/explore/temples/varadaraja-temple.jpg' },
         { name: 'Shri Vedapuriswarar Temple', area: 'Heritage Town', time: '6am - 12pm & 4:30pm - 8:30pm', latitude: 11.939980029084053, longitude: 79.82976515008134, image: '/images/explore/temples/vedhapureeswarar-temple.jpg' },
+    ],
+    Churches: [
+        { name: 'Immaculate Conception Cathedral', area: 'Mission Street', time: '6am - 8pm', latitude: 11.930543, longitude: 79.835291, image: '/images/explore/churches/immaculate-conception-cathedral.jpg' },
+        { name: 'Sacred Heart Basilica', area: 'South Boulevard', time: '6am - 8:30pm', latitude: 11.929675, longitude: 79.831547, image: '/images/explore/churches/sacred-heart-basilica.jpg' },
+        { name: 'Notre Dame des Anges', area: 'White Town', time: '7am - 6:30pm', latitude: 11.932859, longitude: 79.836055, image: '/images/explore/churches/notre-dame-des-anges.jpg' },
+        { name: 'Eglise de Notre Dame de Lourdes', area: 'Villianur', time: '6am - 8pm', latitude: 11.940675, longitude: 79.785547, image: '/images/explore/churches/eglise-de-notre-dame.jpg' },
+    ],
+    Parks: [
+        { name: 'Bharathi Park', area: 'White Town', time: '6am - 8pm', latitude: 11.934675, longitude: 79.834091, image: '/images/explore/parks/bharathi-park.jpg' },
+        { name: 'Botanical Garden', area: 'Marimalai Adigal Salai', time: '9am - 5:30pm', latitude: 11.937245, longitude: 79.837821, image: '/images/explore/parks/botanical-garden.jpg' },
+        { name: 'French War Memorial', area: 'Goubert Avenue', time: '24/7', latitude: 11.932475, longitude: 79.836147, image: '/images/explore/parks/french-war-memorial.jpg' },
+        { name: 'Gandhi Thidal', area: 'Beach Road', time: '24/7', latitude: 11.932859, longitude: 79.835891, image: '/images/explore/parks/gandhi-thidal.jpg' },
     ],
     Activities: [
         { name: 'Scuba Diving', area: 'Serenity Beach', time: '8am - 4pm', latitude: 11.925496279112068, longitude: 79.82801355272586, image: '/images/explore/activities/scuba-diving.jpg' },
@@ -69,6 +81,8 @@ const placesByCategory = {
 const categoryImages = {
     Beaches: '/images/explore/beaches/promenade-beach.jpg',
     Temples: '/images/explore/temples/manakula-vinayagar-temple-category.jpg',
+    Churches: '/images/explore/churches/sacred-heart-basilica-category.jpg',
+    Parks: '/images/explore/parks/botanical-garden-category.jpg',
     Activities: '/images/explore/activities/activities-category.jpg',
     Hotels: '/images/explore/hotels/palais-de-mahe-category.jpg',
     Restaurants: '/images/explore/restaurants/restaurant-category.jpg',
