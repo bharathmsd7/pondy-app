@@ -78,6 +78,7 @@ const placesByCategory = {
         { name: 'Bharathi Park', area: 'White Town', time: '6am - 8pm', latitude: 11.933386494246683, longitude: 79.83417234128214, image: '/images/explore/parks/bharathi-park.JPG' },
         { name: 'Rainbow Nagar Park', area: 'Rainbow Nagar', time: '6am - 8pm', latitude: 11.942376848452847, longitude: 79.82331323759381, image: '/images/explore/parks/rainbow-nagar-park.jpg' },
         { name: 'Solai Nagar Park', area: 'Solai Nagar', time: '6am - 8pm', latitude: 11.955666071783103, longitude: 79.8387502566216, image: '/images/explore/parks/solai-nagar-park.jpg' },
+        { name: 'Botanical Garden', area: 'Orleanpet', time: '6am - 5pm', latitude: 11.930355477769936, longitude: 79.822431364703, image: '/images/explore/parks/botanical-garden.jpg' },
     ],
 };
 
