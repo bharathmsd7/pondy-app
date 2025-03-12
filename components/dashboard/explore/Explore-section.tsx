@@ -69,16 +69,15 @@ const placesByCategory = {
 
     ],
     Churches: [
-        { name: 'CSI St.John\'s Church', area: 'White Town', time: '6am - 6pm', latitude: 11.931123127576422, longitude: 79.83257114833926, image: '/images/explore/churches/CSI-St-Johns-Church.jpg' },
-        { name: 'Notre Dame des Anges Church', area: 'White Town', time: '6am - 6pm', latitude: 11.93002422663489, longitude: 79.83441073545151, image: '/images/explore/churches/Notre-Dame-des-Anges-Church.jpg' },
-        { name: 'The Sacred Heart Basilica', area: 'Mission Street', time: '6am - 8pm', latitude: 11.926111849799238, longitude: 79.82699315753874, image: '/images/explore/churches/The-Sacred-Heart-Basilica.jpg' },
-        { name: 'St. Mary\'s Catholic Church', area: 'White Town', time: '6am - 7pm', latitude: 11.933082724305079, longitude: 79.83004245324284, image: '/images/explore/churches/St-Marys-Catholic-Church.jpg' },
-        { name: 'Our Lady of Immaculate Conception Cathedral', area: 'White Town', time: '6am - 7pm', latitude: 11.933116839498084, longitude: 79.83005854649515, image: '/images/explore/churches/Our-Lady-of-Immaculate-Conception-Cathedral.jpg' },
+        { name: 'CSI St.John\'s Church', area: 'White Town', time: '6am - 6pm', latitude: 11.931123127576422, longitude: 79.83257114833926, image: '/images/explore/churches/csi-st.john\'s-church.jpg' },
+        { name: 'Notre Dame des Anges Church', area: 'White Town', time: '6am - 6pm', latitude: 11.93002422663489, longitude: 79.83441073545151, image: '/images/explore/churches/notre-dame-des-anges-church.jpg' },
+        { name: 'The Sacred Heart Basilica', area: 'Mission Street', time: '6am - 8pm', latitude: 11.926111849799238, longitude: 79.82699315753874, image: '/images/explore/churches/the-sacred-heart-basilica.jpg' },
+        { name: 'St. Mary\'s Catholic Church', area: 'White Town', time: '6am - 7pm', latitude: 11.933082724305079, longitude: 79.83004245324284, image: '/images/explore/churches/st-marys-catholic-church.jpg' },
     ],
     Parks: [
-        { name: 'Bharathi Park', area: 'White Town', time: '6am - 8pm', latitude: 11.933386494246683, longitude: 79.83417234128214, image: '/images/explore/parks/Bharathi-Park.jpg' },
-        { name: 'Rainbow Nagar Park', area: 'Rainbow Nagar', time: '6am - 8pm', latitude: 11.942376848452847, longitude: 79.82331323759381, image: '/images/explore/parks/Rainbow-Nagar-Park.jpg' },
-        { name: 'Solai Nagar Park', area: 'Solai Nagar', time: '6am - 8pm', latitude: 11.955666071783103, longitude: 79.8387502566216, image: '/images/explore/parks/Solai-Nagar-Park.jpg' },
+        { name: 'Bharathi Park', area: 'White Town', time: '6am - 8pm', latitude: 11.933386494246683, longitude: 79.83417234128214, image: '/images/explore/parks/bharathi-park.JPG' },
+        { name: 'Rainbow Nagar Park', area: 'Rainbow Nagar', time: '6am - 8pm', latitude: 11.942376848452847, longitude: 79.82331323759381, image: '/images/explore/parks/rainbow-nagar-park.jpg' },
+        { name: 'Solai Nagar Park', area: 'Solai Nagar', time: '6am - 8pm', latitude: 11.955666071783103, longitude: 79.8387502566216, image: '/images/explore/parks/solai-nagar-park.jpg' },
     ],
 };
 
@@ -88,8 +87,8 @@ const categoryImages = {
     Activities: '/images/explore/activities/activities-category.jpg',
     Hotels: '/images/explore/hotels/palais-de-mahe-category.jpg',
     Restaurants: '/images/explore/restaurants/restaurant-category.jpg',
-    Churches: '/images/explore/churches/Notre-Dame-des-Anges-Church.jpg',
-    Parks: '/images/explore/parks/Bharathi-Park.jpg',
+    Churches: '/images/explore/churches/notre-dame-des-anges-church.jpg',
+    Parks: '/images/explore/parks/bharathi-park.JPG',
 };
 
 const ExplorePage = () => {
