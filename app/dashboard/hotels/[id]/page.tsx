@@ -51,7 +51,7 @@ export default function HotelDetailPage() {
         <div className="flex justify-between items-start mb-2">
           <h1 className="text-xl font-semibold">{hotel.name}</h1>
           <div className="text-right">
-            <span className="font-bold">${hotel.price || 900}</span>
+            <span className="font-bold">{hotel.price || 900}</span>
             <span className="text-sm text-gray-500">/night</span>
           </div>
         </div>

@@ -92,6 +92,16 @@ const categoryImages = {
     Parks: '/images/explore/parks/bharathi-park.JPG',
 };
 
+const categoryViewStates = {
+    Beaches: { latitude: 11.934277, longitude: 79.835564, zoom: 12 },
+    Temples: { latitude: 11.940355, longitude: 79.830869, zoom: 15 },
+    Activities: { latitude: 11.947450, longitude: 79.805811, zoom: 11.75 },
+    Hotels: { latitude: 11.952761, longitude: 79.827015, zoom: 13 },
+    Restaurants: { latitude: 11.935831, longitude: 79.822037, zoom: 13 },
+    Churches: { latitude: 11.932750, longitude: 79.830920, zoom: 14.5 },
+    Parks: { latitude: 11.940708, longitude: 79.830612, zoom: 13.5 }
+} as const;
+
 const ExplorePage = () => {
     const [selectedCategory, setSelectedCategory] = useState<Category>('Beaches');
     const [selectedPlace, setSelectedPlace] = useState<null | {
@@ -103,13 +113,19 @@ const ExplorePage = () => {
         image: string;
     }>(null);
     const [viewState, setViewState] = useState<ViewState>({
-        latitude: 11.9416,
-        longitude: 79.8083,
-        zoom: 12,
+        ...categoryViewStates.Beaches,
         bearing: 0,
         pitch: 0,
         padding: { top: 0, bottom: 0, left: 0, right: 0 }
     });
+
+    const handleCategoryChange = (category: Category) => {
+        setSelectedCategory(category);
+        setViewState(current => ({
+            ...current,
+            ...categoryViewStates[category]
+        }));
+    };
 
     return (
         <div className="flex flex-col h-screen w-screen">
@@ -126,6 +142,7 @@ const ExplorePage = () => {
                         latitude={place.latitude}
                         longitude={place.longitude}
                         anchor="bottom"
+                        color="red"
                         onClick={e => {
                             e.originalEvent.stopPropagation();
                             setSelectedPlace(place);
@@ -162,7 +179,7 @@ const ExplorePage = () => {
                                 relative w-[200px] h-[120px] ${
                                 selectedCategory === category ? 'ring-2 ring-blue-500' : ''
                             }`}
-                            onClick={() => setSelectedCategory(category)}
+                            onClick={() => handleCategoryChange(category)}
                         >
                             <img 
                                 src={categoryImages[category]} 
