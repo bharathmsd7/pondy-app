@@ -60,7 +60,7 @@ const placesByCategory = {
         { name: 'De Fish House', area: 'Heritage Town', time: '12pm - 10pm', latitude: 11.940060509522343, longitude: 79.83112226724934, image: '/images/explore/restaurants/de-fish-house.jpg' },
         { name: 'Kailash Parbat', area: 'Mission Street', time: '12pm - 10pm', latitude: 11.930798926735388, longitude: 79.8303000452604, image: '/images/explore/restaurants/Kailash Parbat.jpg' },
         { name: 'Kamatchi', area: '100 ft Road', time: '12pm - 10pm', latitude: 11.928225765334087, longitude: 79.80716783198109, image: '/images/explore/restaurants/kamatchi.JPG' },
-        { name: 'Le Dupleix', area: 'White Town', time: '12pm - 10pm', latitude: 11.931132644229345, longitude: 79.8338040095794, image: '/images/explore/restaurants/oh-pondi.jpg' },
+        { name: 'Le Dupleix', area: 'White Town', time: '12pm - 10pm', latitude: 11.931132644229345, longitude: 79.8338040095794, image: '/images/explore/restaurants/le-dupleix.jpg' },
         { name: 'Oh Pondi', area: 'South Boulevard', time: '12pm - 10pm', latitude: 11.931132644229345, longitude: 79.8338040095794, image: '/images/explore/restaurants/oh-pondi.jpg' },
         { name: 'Pavilion', area: 'Anna Salai', time: '12pm - 10pm', latitude: 11.934090518123575, longitude: 79.82439802491896, image: '/images/explore/restaurants/pavilion.jpg' },
         { name: 'Saucentoss', area: 'Nehru Street', time: '12pm - 10pm', latitude: 11.935890325869382, longitude: 79.83236562676312, image: '/images/explore/restaurants/saucentoss.jpg' },
