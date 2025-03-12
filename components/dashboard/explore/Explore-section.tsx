@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Map, { Marker, ViewState, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const categories = ['Beaches', 'Temples', 'Churches', 'Parks', 'Activities', 'Hotels', 'Restaurants'] as const;
+const categories = ['Beaches', 'Temples', 'Activities', 'Hotels', 'Restaurants', 'Churches', 'Parks'] as const;
 type Category = typeof categories[number];
 
 const placesByCategory = {
@@ -13,23 +13,15 @@ const placesByCategory = {
         { name: 'Promenade Beach', area: 'White Town', time: '24/7', latitude: 11.93327411490338, longitude:79.83614236144241, image: '/images/explore/beaches/promenade-beach.jpg' },
         { name: 'Serenity Beach', area: 'Kottakuppam', time: '6am - 6pm', latitude: 11.969243978848848, longitude: 79.84459567434908 ,image: '/images/explore/beaches/serenity-beach.png' },
         { name: 'Auro Beach', area: 'Auroville', time: '7am - 6:30pm', latitude: 12.001320863878785, longitude: 79.85510024777128, image: '/images/explore/beaches/auro-beach.jpeg' },
+        { name: 'Bodhi Beach', area: 'Kottakuppam', time: '6am - 6pm', latitude: 11.973102811557998, longitude: 79.84425483062385, image: '/images/explore/beaches/bodhi-beach.jpg' },
+        { name: 'Veerampattinam Beach', area: 'Veerampattinam', time: '24/7', latitude: 11.896138471064734, longitude: 79.8277863756891, image: '/images/explore/beaches/veerampattinam-beach.jpg' },
+        { name: 'Sandunes Paradise Beach', area: 'Chunnambar', time: '9am - 5pm', latitude: 11.872675203321783, longitude: 79.81786786288721, image: '/images/explore/beaches/sandunes-paradise-beach.jpg' },
+        { name: 'Pondicherry Marina Beach', area: 'Marina', time: '24/7', latitude: 11.909932319060697, longitude: 79.82987915926182, image: '/images/explore/beaches/pondicherry-marina-beach.jpg' },
     ],
     Temples: [
         { name: 'Manakula Vinayagar Temple', area: 'White Town', time: '5:30am - 12:30pm & 4pm - 9pm', latitude: 11.93603801014409, longitude: 79.83367282491899 , image: '/images/explore/temples/manakula-vinayagar-temple.jpg' },
         { name: 'Sri Varadaraja Perumal Temple', area: 'Heritage Town', time: '6am - 12pm & 4pm - 8pm', latitude: 11.941178372291377, longitude: 79.83014791428455 ,  image: '/images/explore/temples/varadaraja-temple.jpg' },
         { name: 'Shri Vedapuriswarar Temple', area: 'Heritage Town', time: '6am - 12pm & 4:30pm - 8:30pm', latitude: 11.939980029084053, longitude: 79.82976515008134, image: '/images/explore/temples/vedhapureeswarar-temple.jpg' },
-    ],
-    Churches: [
-        { name: 'Immaculate Conception Cathedral', area: 'Mission Street', time: '6am - 8pm', latitude: 11.930543, longitude: 79.835291, image: '/images/explore/churches/immaculate-conception-cathedral.jpg' },
-        { name: 'Sacred Heart Basilica', area: 'South Boulevard', time: '6am - 8:30pm', latitude: 11.929675, longitude: 79.831547, image: '/images/explore/churches/sacred-heart-basilica.jpg' },
-        { name: 'Notre Dame des Anges', area: 'White Town', time: '7am - 6:30pm', latitude: 11.932859, longitude: 79.836055, image: '/images/explore/churches/notre-dame-des-anges.jpg' },
-        { name: 'Eglise de Notre Dame de Lourdes', area: 'Villianur', time: '6am - 8pm', latitude: 11.940675, longitude: 79.785547, image: '/images/explore/churches/eglise-de-notre-dame.jpg' },
-    ],
-    Parks: [
-        { name: 'Bharathi Park', area: 'White Town', time: '6am - 8pm', latitude: 11.934675, longitude: 79.834091, image: '/images/explore/parks/bharathi-park.jpg' },
-        { name: 'Botanical Garden', area: 'Marimalai Adigal Salai', time: '9am - 5:30pm', latitude: 11.937245, longitude: 79.837821, image: '/images/explore/parks/botanical-garden.jpg' },
-        { name: 'French War Memorial', area: 'Goubert Avenue', time: '24/7', latitude: 11.932475, longitude: 79.836147, image: '/images/explore/parks/french-war-memorial.jpg' },
-        { name: 'Gandhi Thidal', area: 'Beach Road', time: '24/7', latitude: 11.932859, longitude: 79.835891, image: '/images/explore/parks/gandhi-thidal.jpg' },
     ],
     Activities: [
         { name: 'Scuba Diving', area: 'Serenity Beach', time: '8am - 4pm', latitude: 11.925496279112068, longitude: 79.82801355272586, image: '/images/explore/activities/scuba-diving.jpg' },
@@ -76,16 +68,28 @@ const placesByCategory = {
         { name: 'Cafe Veloute', area: 'Surcouf Street', time: '12pm - 10pm', latitude: 11.930423397047331, longitude: 79.8323205057961, image: '/images/explore/restaurants/cafe-veloute.jpg' },
 
     ],
+    Churches: [
+        { name: 'CSI St.John\'s Church', area: 'White Town', time: '6am - 6pm', latitude: 11.931123127576422, longitude: 79.83257114833926, image: '/images/explore/churches/CSI-St-Johns-Church.jpg' },
+        { name: 'Notre Dame des Anges Church', area: 'White Town', time: '6am - 6pm', latitude: 11.93002422663489, longitude: 79.83441073545151, image: '/images/explore/churches/Notre-Dame-des-Anges-Church.jpg' },
+        { name: 'The Sacred Heart Basilica', area: 'Mission Street', time: '6am - 8pm', latitude: 11.926111849799238, longitude: 79.82699315753874, image: '/images/explore/churches/The-Sacred-Heart-Basilica.jpg' },
+        { name: 'St. Mary\'s Catholic Church', area: 'White Town', time: '6am - 7pm', latitude: 11.933082724305079, longitude: 79.83004245324284, image: '/images/explore/churches/St-Marys-Catholic-Church.jpg' },
+        { name: 'Our Lady of Immaculate Conception Cathedral', area: 'White Town', time: '6am - 7pm', latitude: 11.933116839498084, longitude: 79.83005854649515, image: '/images/explore/churches/Our-Lady-of-Immaculate-Conception-Cathedral.jpg' },
+    ],
+    Parks: [
+        { name: 'Bharathi Park', area: 'White Town', time: '6am - 8pm', latitude: 11.933386494246683, longitude: 79.83417234128214, image: '/images/explore/parks/Bharathi-Park.jpg' },
+        { name: 'Rainbow Nagar Park', area: 'Rainbow Nagar', time: '6am - 8pm', latitude: 11.942376848452847, longitude: 79.82331323759381, image: '/images/explore/parks/Rainbow-Nagar-Park.jpg' },
+        { name: 'Solai Nagar Park', area: 'Solai Nagar', time: '6am - 8pm', latitude: 11.955666071783103, longitude: 79.8387502566216, image: '/images/explore/parks/Solai-Nagar-Park.jpg' },
+    ],
 };
 
 const categoryImages = {
     Beaches: '/images/explore/beaches/promenade-beach.jpg',
     Temples: '/images/explore/temples/manakula-vinayagar-temple-category.jpg',
-    Churches: '/images/explore/churches/sacred-heart-basilica-category.jpg',
-    Parks: '/images/explore/parks/botanical-garden-category.jpg',
     Activities: '/images/explore/activities/activities-category.jpg',
     Hotels: '/images/explore/hotels/palais-de-mahe-category.jpg',
     Restaurants: '/images/explore/restaurants/restaurant-category.jpg',
+    Churches: '/images/explore/churches/Notre-Dame-des-Anges-Church.jpg',
+    Parks: '/images/explore/parks/Bharathi-Park.jpg',
 };
 
 const ExplorePage = () => {
@@ -126,7 +130,6 @@ const ExplorePage = () => {
                             e.originalEvent.stopPropagation();
                             setSelectedPlace(place);
                         }}
-                        color='red'
                     >
                     </Marker>
                 ))}
