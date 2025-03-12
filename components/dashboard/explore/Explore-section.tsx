@@ -112,6 +112,7 @@ const ExplorePage = () => {
                             e.originalEvent.stopPropagation();
                             setSelectedPlace(place);
                         }}
+                        color='red'
                     >
                     </Marker>
                 ))}
