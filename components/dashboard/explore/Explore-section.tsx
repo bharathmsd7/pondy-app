@@ -158,13 +158,23 @@ const ExplorePage = () => {
                         anchor="bottom"
                         onClose={() => setSelectedPlace(null)}
                         closeButton={true}
+                        className='rounded-lg'
                     >
                         <div className="p-2 max-w-[200px]">
-                            <img src={selectedPlace.image} alt={selectedPlace.name} 
-                                className="w-full h-32 object-cover rounded-lg mb-2" />
+                            <img 
+                                src={selectedPlace.image} 
+                                alt={selectedPlace.name} 
+                                className="w-full h-32 object-cover rounded-lg mb-2" 
+                            />
                             <h3 className="font-bold text-sm">{selectedPlace.name}</h3>
                             <p className="text-sm text-gray-600">{selectedPlace.area}</p>
                             <p className="text-sm text-gray-600">{selectedPlace.time}</p>
+                            <button
+                                onClick={() => window.open(`https://www.google.com/maps/dir/?api=1&destination=${selectedPlace.latitude},${selectedPlace.longitude}`, '_blank')}
+                                className="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded text-sm"
+                            >
+                                Get directions
+                            </button>
                         </div>
                     </Popup>
                 )}

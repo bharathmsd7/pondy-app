@@ -12,7 +12,7 @@ export default function HomeLayout({
     { name: 'Home', url: '/dashboard', icon: Home },
     { name: 'Hotels', url: 'hotels', icon: Hotel },
     { name: 'Explore', url: 'explore', icon: Compass },
-    { name: 'Rentals', url: 'rentals', icon: CarFront },
+    { name: 'Transport', url: 'rentals', icon: CarFront },
     { name: 'Places', url: 'places', icon: TreePalm },
   ];
   return (
