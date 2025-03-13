@@ -1,4 +1,4 @@
-import { Hotel, Star, Stars, MapPin } from "lucide-react";
+import { Hotel, Stars } from "lucide-react";
 
 export interface HotelCategory {
   name: string;

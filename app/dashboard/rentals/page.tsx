@@ -1,7 +1,6 @@
+import { TransportBooking } from '@/components/dashboard/transport/transport-booking';
 
-import { RentalPage } from '@/components/dashboard/rentals/rental-page';
-
-export default function RentalsPage() {
-  return <RentalPage />;
+export default function TransportPage() {
+  return <TransportBooking />;
 }
   

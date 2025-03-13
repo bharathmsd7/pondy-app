@@ -11,8 +11,12 @@ import { format } from 'date-fns';
 
 type TabType = 'rent' | 'taxi';
 
-export function RentalPage() {
-  const [activeTab, setActiveTab] = useState<TabType>('rent');
+interface RentalPageProps {
+  defaultTab?: 'rent' | 'taxi';
+}
+
+export function RentalPage({ defaultTab = 'rent' }: RentalPageProps) {
+  const [activeTab, setActiveTab] = useState<TabType>(defaultTab);
   const [showResults, setShowResults] = useState(false);
   const [startDate, setStartDate] = useState<Date>();
   const [endDate, setEndDate] = useState<Date>();
@@ -25,21 +29,33 @@ export function RentalPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#fafaf9] mb-12">
       {/* Hero Section with Gradient Overlay */}
-      <div className="relative h-[200px]">
-        <Image
+      <div className="relative h-[200px] rounded-lg">
+        {/* <Image
           src={`/images/rentals/${activeTab === 'rent' ? 'rent-a-car' : 'taxi-service'}.jpg`}
           alt="Transport"
           fill
-          className="object-cover"
+          className="object-cover rounded-lg"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 rounded-lg" />
         
-        {/* Title */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold text-white text-center mb-6">
             Transport
           </h1>
+        </div> */}
+        <div className="relative h-48 rounded-lg overflow-hidden">
+            <Image
+                src="/transport/rent-a-car.jpg"
+                alt="Bus"
+                fill
+                className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20" />
+            <div className="absolute top-4 left-4 text-white">
+                <h1 className="text-2xl font-bold">Rent a car</h1>
+                <p className="text-sm mt-1">Rent or book taxi</p>
+            </div>
         </div>
 
         {/* Tabs */}
