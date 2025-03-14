@@ -9,7 +9,7 @@ export function QuickActions() {
   const actions = [
     { icon: Hotel, text: "Hotels", color: "text-orange-500", path: "/dashboard/hotels" },
     { icon: Compass, text: "Explore", color: "text-orange-500", path: "/dashboard/explore" },
-    { icon: Car, text: "Rentals", color: "text-orange-500", path: "/dashboard/rentals" },
+    { icon: Car, text: "Transport", color: "text-orange-500", path: "/dashboard/rentals" },
     { icon: MapPin, text: "Places", color: "text-orange-500", path: "/dashboard/places" },
   ];
 
