@@ -1,6 +1,6 @@
 // app/hotels/page.tsx
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Star, MapPin, Eye, TicketCheck } from "lucide-react";
+import { MapPin, Eye, TicketCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,35 +13,30 @@ const popularHotels = [
   {
     id: 1,
     name: "Paradise Beach",
-    price: 1005,
     location: "Chunnambar",
     image: "/images/places/paradise-beach.jpeg",
   },
   {
     id: 2,
     name: "Rock Beach",
-    price: 1003,
     location: "Pondicherry Beach",
     image: "/images/places/rock-beach.jpg",
   },
   {
     id: 3,
     name: "Arulmigu Manakula Vinayagar Temple",
-    price: 1007,
     location: "White Town",
     image: "/images/places/manakula-vinayagar-temple.jpg",
   },
   {
     id: 4,
     name: "The Basilica Sacred heart of Jesus Church",
-    price: 1002,
     location: "White Town",
     image: "/images/places/basilica-church.jpg",
   },
   {
     id: 5,
     name: "Aurbindo Ashram",
-    price: 1004,
     location: "ECR Road",
     image: "/images/places/aurbindo-ashram.jpg",
   },
@@ -51,56 +46,48 @@ const allPlaces = [
     {
       id: 6,
       name: "Matri Mandir",
-      price: 1008,
       location: "Auroville",
       image: "/images/places/matrimandir.jpg",
     },
     {
       id: 7,
       name: "Bharathi Park",
-      price: 1005,
       location: "White Town",
       image: "/images/places/bharathi-park.jpg",
     },
     {
       id: 8,
       name: "Ousteri Lake",
-      price: 1001,
       location: "Ousteri",
       image: "/images/places/ousteri_lake.jpg",
     },
     {
       id: 9,
       name: "Sandunes",
-      price: 1002,
       location: "Pudukuppam",
       image: "/images/places/sandunes.jpg",
     },
     {
       id: 10,
       name: "Pondy Museum",
-      price: 3.8,
       location: "White Town",
       image: "/images/places/museum.jpg",
     },
     {
       id: 11,
       name: "Auro Beach",
-      price: 3.9,
       location: "Auroville",
       image: "/images/places/auro-beach.jpg",
     },
     {
       id: 12,
       name: "Notre Dame Church",
-      price: 1007,
       location: "White Town",
       image: "/images/places/notre-dame.jpg",
     },
     {
       id: 13,
       name: "Romain Rolland Library",
-      price: 1006,
       location: "White Town",
       image: "/images/places/romain-rolland-library.jpg",
     },
@@ -174,10 +161,6 @@ export default function PlacesPage() {
               </div>
               <div className="p-4">
                 <h3 className="font-medium text-lg">{hotel.name}</h3>
-                <div className="flex items-center mt-2">
-                  <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                  <span className="ml-1 text-sm">{hotel.price}</span>
-                </div>
                 <div className="flex items-center mt-1 text-gray-500">
                   <MapPin className="h-4 w-4" />
                   <span className="ml-1 text-sm">{hotel.location}</span>
@@ -211,10 +194,6 @@ export default function PlacesPage() {
             </div>
             <div className="p-4">
               <h3 className="font-medium text-lg">{hotel.name}</h3>
-              <div className="flex items-center mt-2">
-                <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                <span className="ml-1 text-sm">{hotel.price}</span>
-              </div>
               <div className="flex items-center mt-1 text-gray-500">
                 <MapPin className="h-4 w-4" />
                 <span className="ml-1 text-sm">{hotel.location}</span>
