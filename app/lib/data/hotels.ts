@@ -25,7 +25,7 @@ export const hotelCategories: HotelCategory[] = [
 export const popularHotels: Hotel[] = [
   {
     id: 1,
-    name: "Le Pondy Beach Resort",
+    name: "Le Pondy Resort",
     rating: 4.5,
     location: "Pondicherry Beach",
     image: "/images/hotels/le-pondy.jpg",

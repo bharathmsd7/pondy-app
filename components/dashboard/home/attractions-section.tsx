@@ -75,7 +75,7 @@ export function AttractionsSection() {
             className={`px-4 py-2 rounded-full whitespace-nowrap transition-colors ${
               activeTab === tab.id
                 ? 'bg-blue-500 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                : 'bg-gray-100 text-gray-600 hover:bg-blue-500'
             }`}
           >
             {tab.label}
