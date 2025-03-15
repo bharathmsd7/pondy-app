@@ -129,6 +129,11 @@ const ExplorePage = () => {
 
     return (
         <div className="flex flex-col h-screen w-screen">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 shadow-sm border-b border-blue-100/50">
+                <p className="text-sm text-center text-blue-700/80 font-medium">
+                    Click on any pin to open in Google Maps
+                </p>
+            </div>
             <Map
                 {...viewState}
                 onMove={evt => setViewState(evt.viewState)}
