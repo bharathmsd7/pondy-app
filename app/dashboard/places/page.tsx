@@ -24,36 +24,36 @@ const popularHotels = [
   },
   {
     id: 3,
-    name: "Arulmigu Manakula Vinayagar Temple",
+    name: "White Town",
     location: "White Town",
-    image: "/images/places/manakula-vinayagar-temple.jpg",
+    image: "/images/Attractions/White Town/wt1.jpg",
   },
   {
     id: 4,
-    name: "The Basilica Sacred heart of Jesus Church",
+    name: "Auroville",
     location: "White Town",
-    image: "/images/places/basilica-church.jpg",
+    image: "/images/Attractions/Auroville/aa.jpg",
   },
   {
     id: 5,
-    name: "Aurbindo Ashram",
+    name: "Bharathi Park",
     location: "ECR Road",
-    image: "/images/places/aurbindo-ashram.jpg",
+    image: "/images/Attractions/Bharati Park/b1.jpg",
   },
 ];
 
 const allPlaces = [
     {
       id: 6,
-      name: "Matri Mandir",
-      location: "Auroville",
-      image: "/images/places/matrimandir.jpg",
+      name: "Arulmigu Manakula Vinayagar Temple",
+      location: "White Town",
+      image: "/images/places/manakula-vinayagar-temple.jpg",
     },
     {
       id: 7,
-      name: "Bharathi Park",
+      name: "The Basilica Sacred heart of Jesus Church",
       location: "White Town",
-      image: "/images/places/bharathi-park.jpg",
+      image: "/images/places/basilica-church.jpg",
     },
     {
       id: 8,
