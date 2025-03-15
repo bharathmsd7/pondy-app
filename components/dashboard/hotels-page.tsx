@@ -15,7 +15,8 @@ import {
     Wind, 
     Wine,
     Waves,
-    User
+    User,
+    IndianRupee
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -273,15 +274,27 @@ export function HotelsPage() {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="font-medium text-lg">{hotel.name}</h3>
-                      <div className="flex items-center mt-2">
-                        <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                        <span className="ml-1 text-sm">{hotel.rating}</span>
+                      <div className="flex justify-between items-start">
+                        <h3 className="font-medium text-lg">{hotel.name}</h3>
+                        <span className="text-base font-bold bg-gray-50 px-2.5 py-1 rounded-lg flex items-center">
+                          <IndianRupee className="h-4 w-4 mr-0.5" />
+                          {hotel.price}
+                        </span>
                       </div>
                       <div className="flex items-center mt-1 text-gray-500">
                         <MapPin className="h-4 w-4" />
                         <span className="ml-1 text-sm">{hotel.location}</span>
                       </div>
+                      <Button 
+                        className="w-full mt-3 text-white" 
+                        size="sm"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          // Add booking logic here
+                        }}
+                      >
+                        Book
+                      </Button>
                     </div>
                   </Link>
                 ))}
@@ -310,15 +323,27 @@ export function HotelsPage() {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-medium text-lg">{hotel.name}</h3>
-                    <div className="flex items-center mt-2">
-                      <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                      <span className="ml-1 text-sm">{hotel.rating}</span>
+                    <div className="flex justify-between items-start">
+                      <h3 className="font-medium text-lg">{hotel.name}</h3>
+                      <span className="text-base font-bold bg-gray-50 px-2.5 py-1 rounded-lg flex items-center">
+                        <IndianRupee className="h-4 w-4 mr-0.5" />
+                        {hotel.price}
+                      </span>
                     </div>
                     <div className="flex items-center mt-1 text-gray-500">
                       <MapPin className="h-4 w-4" />
                       <span className="ml-1 text-sm">{hotel.location}</span>
                     </div>
+                    <Button 
+                      className="w-full mt-3 text-white" 
+                      size="sm"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        // Add booking logic here
+                      }}
+                    >
+                      Book
+                    </Button>
                   </div>
                 </Link>
               ))}
@@ -450,15 +475,27 @@ export function HotelsPage() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-medium text-lg">{hotel.name}</h3>
-                  <div className="flex items-center mt-2">
-                    <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                    <span className="ml-1 text-sm">{hotel.rating}</span>
+                  <div className="flex justify-between items-start">
+                    <h3 className="font-medium text-lg">{hotel.name}</h3>
+                    <span className="text-base font-bold bg-gray-50 px-2.5 py-1 rounded-lg flex items-center">
+                      <IndianRupee className="h-4 w-4 mr-0.5" />
+                      {hotel.price}
+                    </span>
                   </div>
                   <div className="flex items-center mt-1 text-gray-500">
                     <MapPin className="h-4 w-4" />
                     <span className="ml-1 text-sm">{hotel.location}</span>
                   </div>
+                  <Button 
+                    className="w-full mt-3 text-white" 
+                    size="sm"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Add booking logic here
+                    }}
+                  >
+                    Book
+                  </Button>
                 </div>
               </Link>
             ))}
