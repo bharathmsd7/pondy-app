@@ -25,14 +25,14 @@ export function TransportBooking() {
           className={cn(
             'flex-1 py-3 px-4 font-medium text-sm flex flex-col items-center gap-1 relative',
             activeTab === 'bus'
-              ? 'text-[#fbc101]'
+              ? 'text-[#FF5722]'
               : 'text-gray-600'
           )}
         >
           <Bus className="w-7 h-7" />
           Bus
           {activeTab === 'bus' && (
-            <div className="absolute bottom-0 left-0 right-0 h-1 rounded-lg bg-[#fbc101]" />
+            <div className="absolute bottom-0 left-0 right-0 h-1 rounded-lg bg-[#D84315]" />
           )}
         </button>
         <button
@@ -40,14 +40,14 @@ export function TransportBooking() {
           className={cn(
             'flex-1 py-3 px-4 font-medium text-sm flex flex-col items-center gap-1 relative',
             activeTab === 'train'
-              ? 'text-[#fbc101]'
+              ? 'text-[#FF5722]'
               : 'text-gray-600'
           )}
         >
           <Train className="w-7 h-7" />
           Train
           {activeTab === 'train' && (
-            <div className="absolute bottom-0 left-0 right-0 h-1 rounded-lg bg-[#fbc101]" />
+            <div className="absolute bottom-0 left-0 right-0 h-1 rounded-lg bg-[#D84315]" />
           )}
         </button>
         <button
@@ -55,14 +55,14 @@ export function TransportBooking() {
           className={cn(
             'flex-1 py-3 px-4 font-medium text-sm flex flex-col items-center gap-1 relative',
             activeTab === 'rental'
-              ? 'text-[#fbc101]'
+              ? 'text-[#FF5722]'
               : 'text-gray-600'
           )}
         >
           <CarFront className="w-7 h-7" />
           Rentals
           {activeTab === 'rental' && (
-            <div className="absolute bottom-0 left-0 right-0 h-1 rounded-lg bg-[#fbc101]" />
+            <div className="absolute bottom-0 left-0 right-0 h-1 rounded-lg bg-[#D84315]" />
           )}
         </button>
         {/* <button
@@ -151,7 +151,7 @@ export function TransportBooking() {
                 </Popover>
               </div>
 
-              <Button className="w-full bg-[#fbc101] text-white hover:bg-[#e5b001]">
+              <Button className="w-full bg-[#D84315] text-white hover:bg-[#D84315]/90">
                 Search buses
               </Button>
             </div>
@@ -226,7 +226,7 @@ export function TransportBooking() {
                 </Popover>
               </div>
 
-              <Button className="w-full bg-[#fbc101] text-white hover:bg-[#e5b001]">
+              <Button className="w-full bg-[#D84315] text-white hover:bg-[#D84315]/90">
                 Search trains
               </Button>
             </div>
