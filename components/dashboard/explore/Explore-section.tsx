@@ -185,14 +185,14 @@ const ExplorePage = () => {
                 )}
             </Map>
 
-            <div className="w-full overflow-x-auto pb-28 md:pb-8 pt-2 px-4 no-scrollbar">
+            <div className="w-full overflow-x-auto pb-28 md:pb-8 pt-4 px-4 no-scrollbar">
                 <div className="flex space-x-4 min-w-min">
                     {categories.map(category => (
                         <div 
                             key={category} 
                             className={`flex-shrink-0 rounded-lg shadow-lg cursor-pointer overflow-hidden
                                 relative w-[200px] h-[120px] ${
-                                selectedCategory === category ? 'ring-2 ring-blue-500' : ''
+                                selectedCategory === category ? 'ring-2 ring-red-500' : ''
                             }`}
                             onClick={() => handleCategoryChange(category)}
                         >
