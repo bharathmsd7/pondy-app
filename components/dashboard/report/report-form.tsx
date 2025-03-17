@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
+import { toast } from "sonner"
 import {
   Select,
   SelectContent,
@@ -18,8 +19,10 @@ export function ReportForm({ open, onOpenChange }: { open: boolean; onOpenChange
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log({ category, complaint });
+    toast.success("Your report has been successfully submitted.")
+
+    setCategory('');
+    setComplaint('');
     onOpenChange(false);
   };
 
@@ -35,10 +38,10 @@ export function ReportForm({ open, onOpenChange }: { open: boolean; onOpenChange
               <SelectValue placeholder="Select category" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="infrastructure">Infrastructure</SelectItem>
-              <SelectItem value="safety">Safety</SelectItem>
-              <SelectItem value="cleanliness">Cleanliness</SelectItem>
-              <SelectItem value="other">Other</SelectItem>
+              <SelectItem value="infrastructure" className="data-[state=checked]:text-white">Infrastructure</SelectItem>
+              <SelectItem value="safety" className="data-[state=checked]:text-white">Safety</SelectItem>
+              <SelectItem value="cleanliness" className="data-[state=checked]:text-white">Cleanliness</SelectItem>
+              <SelectItem value="other" className="data-[state=checked]:text-white">Other</SelectItem>
             </SelectContent>
           </Select>
           

@@ -119,7 +119,7 @@ export function RentalPage({ defaultTab = 'rent' }: RentalPageProps) {
                         )}
                       >
                         <CalendarIcon />
-                        {startDate ? format(startDate, "PPP") : "Pick a date"}
+                        {startDate ? format(startDate, "MMM d") : "Pick a date"}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
@@ -144,7 +144,7 @@ export function RentalPage({ defaultTab = 'rent' }: RentalPageProps) {
                         )}
                       >
                         <CalendarIcon />
-                        {endDate ? format(endDate, "PPP") : "Pick a date"}
+                        {endDate ? format(endDate, "MMM d") : "Pick a date"}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
