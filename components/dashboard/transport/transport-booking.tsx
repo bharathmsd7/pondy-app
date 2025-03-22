@@ -9,12 +9,33 @@ import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { format } from 'date-fns';
 import { RentalPage } from '../rentals/rental-page';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { BusListings } from './bus-listings';
 
 type TabType = 'bus' | 'train' | 'rental' | 'taxi';
 
 export function TransportBooking() {
   const [activeTab, setActiveTab] = useState<TabType>('bus');
   const [date, setDate] = useState<Date>();
+  const [showBusListings, setShowBusListings] = useState(false);
+  const [selectedCity, setSelectedCity] = useState('');
+
+  const handleSearch = () => {
+    if (selectedCity) {
+      setShowBusListings(true);
+    }
+  };
+
+  if (showBusListings) {
+    return (
+      <BusListings 
+        fromCity={selectedCity}
+        toCity="Pondicherry"
+        date={date}
+        onBack={() => setShowBusListings(false)}
+      />
+    );
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-[#fafaf9] md:mt-20">
@@ -103,26 +124,38 @@ export function TransportBooking() {
             <div className="bg-white rounded-lg p-4 space-y-4">
               <div>
                 <label className="text-sm text-gray-500">From</label>
-                <div className="mt-1 flex items-center border rounded-lg px-4 py-2">
-                  <MapPin className="w-5 h-5 text-gray-400 mr-2" />
-                  <Input
-                    type="text"
-                    placeholder="Enter city or town"
-                    className="border-0 shadow-none focus-visible:ring-0 p-0"
-                  />
-                </div>
+                <Select>
+                  <SelectTrigger className="mt-1 border rounded-lg text-left justify-between py-5">
+                    <div className="flex items-center">
+                      <MapPin className="w-5 h-5 text-gray-400 mr-2" />
+                      <SelectValue placeholder="Select city" />
+                    </div>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="chennai">Chennai</SelectItem>
+                    <SelectItem value="bangalore">Bangalore</SelectItem>
+                    <SelectItem value="trichy">Trichy</SelectItem>
+                    <SelectItem value="kerala">Kerala</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div>
-                <label className="text-sm text-gray-500">To</label>
-                <div className="mt-1 flex items-center border rounded-lg px-4 py-2">
-                  <MapPin className="w-5 h-5 text-gray-400 mr-2" />
-                  <Input
-                    type="text"
-                    placeholder="Enter city or town"
-                    className="border-0 shadow-none focus-visible:ring-0 p-0"
-                  />
-                </div>
+                <label className="text-sm text-gray-500">Dropping Location</label>
+                <Select onValueChange={setSelectedCity}>
+                    <SelectTrigger className="mt-1 border rounded-lg text-left justify-between py-5">
+                    <div className="flex items-center">
+                        <MapPin className="w-5 h-5 text-gray-400 mr-2" />
+                        <SelectValue placeholder="Select city" />
+                    </div>
+                    </SelectTrigger>
+                    <SelectContent>
+                    <SelectItem value="Chennai">Indra Gandhi Statue</SelectItem>
+                    <SelectItem value="Bangalore">Raijv Gandhi Statue</SelectItem>
+                    <SelectItem value="Trichy">New Busstand</SelectItem>
+                    <SelectItem value="Kerala">Jipmer</SelectItem>
+                    </SelectContent>
+                </Select>
               </div>
 
               <div>
@@ -151,9 +184,14 @@ export function TransportBooking() {
                 </Popover>
               </div>
 
-              <Button className="w-full bg-[#D84315] text-white hover:bg-[#D84315]/90">
-                Search buses
-              </Button>
+                <Button 
+                    className="w-full bg-[#D84315] text-white hover:bg-[#D84315]/90"
+                    onClick={handleSearch}
+                    disabled={!selectedCity}
+                >
+                    Search buses
+                </Button>
+              
             </div>
           </div>
         )}

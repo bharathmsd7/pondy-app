@@ -1,6 +1,7 @@
 "use client";
 import { Home, Compass, CarFront, Hotel, TreePalm } from 'lucide-react'
 import { NavBar } from "@/components/ui/tubelight-navbar"
+import { Toaster } from "@/components/ui/sonner"
 
 export default function HomeLayout({
     children,
@@ -19,6 +20,7 @@ export default function HomeLayout({
     <div className="flex flex-col min-h-screen">
       <NavBar items={navItems} />
       {children}
+      <Toaster />
     </div>
   )
 }
