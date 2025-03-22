@@ -48,6 +48,7 @@ export function NavBar({ items, className }: NavBarProps) {
             <div
               key={item.name}
               onClick={() => {
+                if (activeTab === item.name) return; // Prevent navigation if already on this tab
                 setActiveTab(item.name)
                 router.replace(window.location.pathname.startsWith("/dashboard/") ? item.url : `dashboard/${item.url}`)
               }}
