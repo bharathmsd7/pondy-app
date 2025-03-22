@@ -242,13 +242,13 @@ const placeDetails: Record<string, PlaceDetails> = {
   '8': {
     id: 8,
     name: 'Ousteri Lake',
-    mainImage: '/images/places/ousteri-lake.jpg',
+    mainImage: '/images/places/ousteri_lake.jpg',
     description: 'Ousteri Lake, also known as Ossudu Lake, is the largest freshwater lake in Pondicherry. This bird sanctuary is home to over 40 species of migratory birds. Perfect for nature lovers and bird watchers, the lake offers serene views and peaceful surroundings, especially during sunrise and sunset.',
     images: [
-      '/images/places/ousteri-lake.jpg',
-      '/images/places/ousteri-lake.jpg',
-      '/images/places/ousteri-lake.jpg',
-      '/images/places/ousteri-lake.jpg'
+      '/images/places/ousteri_lake.jpg',
+      '/images/places/ousteri_lake.jpg',
+      '/images/places/ousteri_lake.jpg',
+      '/images/places/ousteri_lake.jpg'
     ],
     timings: {
       weekdays: '6:00 AM - 5:00 PM',
@@ -387,13 +387,13 @@ const placeDetails: Record<string, PlaceDetails> = {
   '13': {
     id: 13,
     name: 'Romain Rolland Library',
-    mainImage: '/images/places/romain-rolland.jpg',
+    mainImage: '/images/places/romain-rolland-library.jpg',
     description: 'The Romain Rolland Library, established in 1827, is one of the oldest public libraries in India. This historic building houses a vast collection of French and Tamil literature, along with rare books and documents from the colonial period. The architecture reflects the French colonial style, making it a significant cultural landmark.',
     images: [
-      '/images/places/romain-rolland.jpg',
-      '/images/places/romain-rolland.jpg',
-      '/images/places/romain-rolland.jpg',
-      '/images/places/romain-rolland.jpg'
+      '/images/places/romain-rolland-library.jpg',
+      '/images/places/romain-rolland-library.jpg',
+      '/images/places/romain-rolland-library.jpg',
+      '/images/places/romain-rolland-library.jpg'
     ],
     timings: {
       weekdays: '10:00 AM - 7:00 PM',
