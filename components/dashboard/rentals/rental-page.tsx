@@ -163,34 +163,36 @@ export function RentalPage({ defaultTab = 'rent' }: RentalPageProps) {
       {/* Search Form */}
       <div className="flex-1 px-4 pt-12 pb-8">
         <div className="bg-white rounded-lg shadow-sm p-4 max-w-md mx-auto">
-          {/* Vehicle Type Selector */}
-          <div className="mb-4">
-            <label className="text-sm text-gray-500 mb-2 block">Vehicle Type</label>
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => setVehicleType('car')}
-                className={cn(
-                  'py-2 px-4 rounded-lg text-sm font-medium transition-colors',
-                  vehicleType === 'car'
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                )}
-              >
-                Car
-              </button>
-              <button
-                onClick={() => setVehicleType('bike')}
-                className={cn(
-                  'py-2 px-4 rounded-lg text-sm font-medium transition-colors',
-                  vehicleType === 'bike'
-                    ? 'bg-black text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                )}
-              >
-                Bike
-              </button>
+          {/* Vehicle Type Selector - Only show for rent tab */}
+          {activeTab === 'rent' && (
+            <div className="mb-4">
+              <label className="text-sm text-gray-500 mb-2 block">Vehicle Type</label>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => setVehicleType('car')}
+                  className={cn(
+                    'py-2 px-4 rounded-lg text-sm font-medium transition-colors',
+                    vehicleType === 'car'
+                      ? 'bg-black text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  )}
+                >
+                  Car
+                </button>
+                <button
+                  onClick={() => setVehicleType('bike')}
+                  className={cn(
+                    'py-2 px-4 rounded-lg text-sm font-medium transition-colors',
+                    vehicleType === 'bike'
+                      ? 'bg-black text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  )}
+                >
+                  Bike
+                </button>
+              </div>
             </div>
-          </div>
+          )}
 
           {activeTab === 'rent' ? (
             <div className="space-y-4">
@@ -343,7 +345,7 @@ export function RentalPage({ defaultTab = 'rent' }: RentalPageProps) {
         {showResults && (
           <div className="mt-6 max-w-md mx-auto">
             <h2 className="text-lg font-semibold mb-4">
-              {activeTab === 'rent' ? 'Select the vehicle of your choice' : 'Taxis available for your route'}
+              {activeTab === 'rent' ? 'Select the vehicle of your choice' : 'Available Taxi'}
             </h2>
             <div className="space-y-4">
               {activeTab === 'rent' && (vehicleType === 'car' ? carOptions : bikeOptions).map((vehicle, index) => (
@@ -379,8 +381,35 @@ export function RentalPage({ defaultTab = 'rent' }: RentalPageProps) {
                 </div>
               ))}
               {activeTab === 'taxi' && (
-                <div className="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center">
-                  <CarFront className="w-12 h-12 text-gray-400" />
+                <div className="bg-white rounded-lg shadow-sm p-4">
+                  <div className="flex items-center">
+                    <div className="relative w-32 h-24 rounded-lg">
+                      <Image
+                        src="/images/rentals/Grandi10.png"
+                        alt="Grand i10"
+                        height={120}
+                        width={130}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex-1 ml-4">
+                      <h3 className="font-medium">Grand i10</h3>
+                      <div className="flex flex-wrap gap-3 mt-2 text-sm text-gray-500">
+                        <span>4 Seater</span>
+                        <span>AC</span>
+                        <span>Petrol</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between">
+                    <div>
+                      <span className="text-sm text-gray-500">Estimated fare</span>
+                      <div className="font-semibold">₹ 350</div>
+                    </div>
+                    <Button className="text-white">
+                      Book Now
+                    </Button>
+                  </div>
                 </div>
               )}
             </div>
