@@ -1,4 +1,4 @@
-// app/hotels/page.tsx
+// app/places/page.tsx
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { MapPin, Eye, TicketCheck } from "lucide-react";
 import Image from "next/image";
@@ -9,7 +9,11 @@ const placesCategories = [
   { name: "Events", icon: TicketCheck },
 ];
 
-const popularHotels = [
+// Change comment at the top
+// app/places/page.tsx
+
+// Rename popularHotels to popularPlaces
+const popularPlaces = [
   {
     id: 1,
     name: "Paradise Beach",
@@ -140,30 +144,31 @@ export default function PlacesPage() {
     <div className="h-16 md:h-20"></div> */}
 
     {/* Popular Stays */}
+    {/* Popular Places */}
     <div className="container mx-auto px-4 mt-12">
       <h2 className="text-2xl font-bold mb-4">Popular Attractions</h2>
       
       <ScrollArea className="w-full whitespace-nowrap">
         <div className="flex space-x-4 pb-4">
-          {popularHotels.map((hotel) => (
+          {popularPlaces.map((place) => (
             <Link
-              key={hotel.id}
-              href={`/dashboard/places/${hotel.id}`}
+              key={place.id}
+              href={`/dashboard/places/${place.id}`}
               className="w-[280px] shrink-0 rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="relative h-[180px] w-full">
                 <Image
-                  src={hotel.image}
-                  alt={hotel.name}
+                  src={place.image}
+                  alt={place.name}
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-4">
-                <h3 className="font-medium text-lg">{hotel.name}</h3>
+                <h3 className="font-medium text-lg">{place.name}</h3>
                 <div className="flex items-center mt-1 text-gray-500">
                   <MapPin className="h-4 w-4" />
-                  <span className="ml-1 text-sm">{hotel.location}</span>
+                  <span className="ml-1 text-sm">{place.location}</span>
                 </div>
               </div>
             </Link>
@@ -173,30 +178,30 @@ export default function PlacesPage() {
       </ScrollArea>
     </div>
 
-     {/* All Hotels */}
-     <div className="container mx-auto px-4 mt-4">
+    {/* All Places */}
+    <div className="container mx-auto px-4 mt-4">
       <h2 className="text-2xl font-bold mb-4">All Places</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {allPlaces.map((hotel) => (
+        {allPlaces.map((place) => (
           <Link
-            key={hotel.id}
-            href={`/hotels/${hotel.id}`}
+            key={place.id}
+            href={`/dashboard/places/${place.id}`}
             className="rounded-xl overflow-hidden bg-white shadow-md hover:shadow-lg transition-shadow"
           >
             <div className="relative h-[180px] w-full">
               <Image
-                src={hotel.image}
-                alt={hotel.name}
+                src={place.image}
+                alt={place.name}
                 fill
                 className="object-cover"
               />
             </div>
             <div className="p-4">
-              <h3 className="font-medium text-lg">{hotel.name}</h3>
+              <h3 className="font-medium text-lg">{place.name}</h3>
               <div className="flex items-center mt-1 text-gray-500">
                 <MapPin className="h-4 w-4" />
-                <span className="ml-1 text-sm">{hotel.location}</span>
+                <span className="ml-1 text-sm">{place.location}</span>
               </div>
             </div>
           </Link>
