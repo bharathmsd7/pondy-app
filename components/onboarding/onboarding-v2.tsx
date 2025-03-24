@@ -11,19 +11,19 @@ interface OnboardingSlide {
 
 const slides: OnboardingSlide[] = [
   {
-    image: '/images/french-quarter.jpg',
-    title: 'Explore Pondicherry',
-    description: 'Discover the charm of French architecture and colonial heritage',
+    image: '/images/onboardone.jpg',
+    title: 'French Colony',
+    description: 'Pondicherry was a French colony for around 280 years (1674 to 1954), leaving behind a rich architectural and cultural legacy. The French influence is still seen in its buildings, street names, and cuisine.',
   },
   {
-    image: '/images/paradise-beach.jpg',
-    title: 'Beautiful Beaches',
-    description: 'Experience the serene beaches and coastal beauty of Pondicherry',
+    image: '/images/onboardtwo.jpg',
+    title: 'Arikamedu',
+    description: 'Archaeological finds from Arikamedu, an ancient port near Pondicherry, show evidence of Roman trade dating back to 2nd century BC — including Roman wine jars and coins.',
   },
   {
-    image: '/images/auroville.jpg',
-    title: 'Visit Auroville',
-    description: 'Explore the unique spiritual and cultural hub of Auroville',
+    image: '/images/onboardthird.jpg',
+    title: 'Safe Haven',
+    description: 'Pondicherry became a safe haven for Indian freedom fighters like Subramania Bharati and Sri Aurobindo, who sought refuge from British rule.',
   },
 ];
 
