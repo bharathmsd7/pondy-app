@@ -232,7 +232,7 @@ export default function PlaceDetails() {
         </div>
 
         {/* Map */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4">Location</h2>
           <div className="aspect-video rounded-xl overflow-hidden">
             <iframe
@@ -245,7 +245,7 @@ export default function PlaceDetails() {
               src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_TOKEN}&q=${place.location.latitude},${place.location.longitude}`}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
