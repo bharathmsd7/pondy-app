@@ -29,7 +29,7 @@ export const popularHotels: Hotel[] = [
     rating: 4.5,
     location: "Pondicherry Beach",
     image: "/images/hotels/le-pondy.jpg",
-    price: 900,
+    price: 4900,
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const popularHotels: Hotel[] = [
     rating: 4.3,
     location: "French Quarter",
     image: "/images/hotels/villa-shanti.jpeg",
-    price: 850,
+    price: 1850,
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const popularHotels: Hotel[] = [
     rating: 4.7,
     location: "White Town",
     image: "/images/hotels/palais-de-mahe.jpg",
-    price: 1200,
+    price: 2200,
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const popularHotels: Hotel[] = [
     rating: 4.2,
     location: "Rock Beach",
     image: "/images/hotels/the-promenade.jpg",
-    price: 950,
+    price: 5950,
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ export const popularHotels: Hotel[] = [
     rating: 4.4,
     location: "ECR Road",
     image: "/images/hotels/ocean-spray.jpg",
-    price: 1100,
+    price: 4100,
   },
 ];
 
@@ -72,7 +72,7 @@ export const allHotels: Hotel[] = [
     rating: 3.9,
     location: "J.N. Street",
     image: "/images/hotels/hotel-atithi.jpg",
-    price: 750,
+    price: 3750,
   },
   {
     id: 7,
@@ -80,7 +80,7 @@ export const allHotels: Hotel[] = [
     rating: 4.0,
     location: "Auroville Main Road",
     image: "/images/hotels/sunway-grt.jpg",
-    price: 800,
+    price: 6800,
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ export const allHotels: Hotel[] = [
     rating: 4.4,
     location: "Heritage Town",
     image: "/images/hotels/la-villa.jpg",
-    price: 950,
+    price: 4950,
   },
   {
     id: 10,
@@ -96,7 +96,7 @@ export const allHotels: Hotel[] = [
     rating: 3.8,
     location: "Bussy Street",
     image: "/images/hotels/le-royal-park.jpg",
-    price: 700,
+    price: 5700,
   },
   {
     id: 11,
@@ -104,7 +104,7 @@ export const allHotels: Hotel[] = [
     rating: 3.5,
     location: "S.V. Patel Salai",
     image: "/images/hotels/hotel-kailash.jpg",
-    price: 600,
+    price: 5600,
   },
   {
     id: 12,
@@ -112,7 +112,7 @@ export const allHotels: Hotel[] = [
     rating: 3.7,
     location: "Shivaji Garden",
     image: "/images/hotels/anandha-inn.jpg",
-    price: 650,
+    price: 5650,
   },
   {
     id: 13,
@@ -120,7 +120,7 @@ export const allHotels: Hotel[] = [
     rating: 4.6,
     location: "Tamil Quarter",
     image: "/images/hotels/maison-perumal.jpg",
-    price: 1000,
+    price: 5000,
   },
 ];
 
